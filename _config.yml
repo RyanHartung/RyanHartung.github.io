@@ -22,7 +22,7 @@ repository               : #"academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "files/rhartung.jpg"
   name             : "Ryan Hartung"
   pronouns         : # example: "she/her"  
   bio              : "CS PhD student at the University of Notre Dame"

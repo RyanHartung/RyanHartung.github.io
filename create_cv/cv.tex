@@ -1,0 +1,177 @@
+%------------------------
+% Ethan's Résumé Template
+% Author: necusjz
+% License: CC-BY-4.0
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+
+% font options
+\usepackage{newpxtext}
+\linespread{1.05}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% contact information
+\begin{center}
+    \textbf{\LARGE\scshape Ryan Hartung} \\
+    \vspace{1pt}\small
+    \href{mailto:}{rhartung@nd.edu}
+    \big| 
+    (713) 449-9492
+    \big|
+    \href{https://github.com/RHartung-ND}{GitHub}
+    \big|
+    \href{https://www.linkedin.com/in/ryan-hartung-19a901237/}{LinkedIn}
+\end{center}
+
+\section{Education}
+    \cvheadingstart
+        \cvheading
+            {The University of Notre Dame}{South Bend, IN}
+            {Ph.D. in Computer Science}{\textit{Expected: 2028}}
+            \cvitemstart
+                \cvitem{Advisor: Dr. Douglas Thain}
+                \cvitem{Research focus: Distributed Systems and High Performance Computing}
+            \cvitemend
+        \cvheading
+            {The University of Notre Dame}{South Bend, IN}
+            {Master of Science in Computer Science}{\textit{July 2025}}
+            \cvitemstart
+                \cvitem{Coursework in Advanced Computer Architecture, Data Science, Data Visualization, Graduate Operating Systems, Modern Web Development, Neural Networks, Secure Software Engineering, Special Topics in Advanced and Secure Networks}
+            \cvitemend
+        \cvheading
+            {The University of Texas at Austin}{Austin, TX}
+            {Bachelor of Science in Physics; Computation Option}{\textit{May 2024}}
+            \cvitemstart
+                \cvitem{Certificate in Elements of Computing}
+                \cvitem{Coursework in Linear Algebra, Modern Physics, Quantum Physics, Classical Electrodynamics, Classical }
+            \cvitemend
+    \cvheadingend
+
+\section{Work Experience}
+    \cvheadingstart
+        \cvheading
+            {The University of Notre Dame}{South Bend, IN}
+            {Graduate Research Assistant}{January 2025 - Present}
+            \cvitemstart
+                \cvitem{Starting work on the xGFabric collaborative project under the supervision of Dr. Thain}
+            \cvitemend
+
+        \cvheading
+            {Hargrove Engineers and Constructors}{Katy, TX}
+            {Controls \& Automations Engineering Intern}{May 2024 - August 2024}
+            \cvitemstart
+                \cvitem{Automated the migration of 200,000+ lines of Dow MOD5 code into Honeywell Experion without the loss of functionality}
+                \cvitem{Tracked, analyzed, and documented over 7,000 variables to design and draw comprehensive flow diagrams to visualize variable definitions}
+                \cvitem{Developed multiple algorithms to expedite the migration and variable mapping processes, improving overall efficiency}
+            \cvitemend
+
+        \cvheading
+            {Hargrove Engineers and Constructors}{Katy, TX}
+            {Controls \& Automations Engineering Intern}{May 2023 - August 2023}
+            \cvitemstart
+                \cvitem{Instantiated existing library modules to complete the upcoming Reactor and Train configuration for Westlake's PVC plant}
+                \cvitem{Performed safety testing on all module and sequence configurations using internal procedures on simulated ABB hardware}
+                \cvitem{Successfully configured Modbus communication between the ABB and HIMA system controllers}
+                \cvitem{Updated structured text configuration to handle cross-controller communications}
+            \cvitemend
+
+        \cvheading
+            {The University of Texas at Austin}{Austin, Texas}
+            {Undergraduate Research Assistant}{June 2022 - December 2023}
+            \cvitemstart
+                \cvitem{Created an open-source program which leverages various Python packages to analyze star-spots patterns across multiple thousands of stars in a compressed algorithm. Ensured that the algorithm was expandable and efficient for large datasets (over 6,000 star systems)}
+                \cvitem{Compared the contrast ratio of star-spots from two different NASA missions (Kepler and TESS) to establish a basis for exoplanet identification}
+                \cvitem{Implemented parallel computing and multi-core processing to optimize runtime and compilation}
+                \cvitem{Published results to a public \href{https://github.com/BrownDwarf/contracosta/}{GitHub repository}}
+                \cvitem{Funded by a NASA research grant}
+            \cvitemend
+    \cvheadingend
+
+
+\section{Technical Skills}
+% \cvskill{Profiecent Programming Languages}{4}
+\cvitemstart
+  \cvitem{Proficient Programming Languages: C/C++, Java, JavaScript, JSON, Julia, Python, XML}
+  \cvitem{Machine Learning \& AI: Keras, PyTorch, Scikit-learn, TensorFlow}
+  \cvitem{Other Tools \& Frameworks: ABB, Git, Honeywell, LaTeX, Linux, Microsoft Suite, OpenFOAM, ParaView}
+\cvitemend
+\vspace{-5pt}
+
+\end{document}

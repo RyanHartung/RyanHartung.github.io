@@ -76,6 +76,8 @@
 \newcommand{\cvitemstart}{\begin{itemize}\justifying}
 \newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
 
+\newcommand{\tabitem}{~~\hspace{1.25em} \llap{\textbullet}~~}
+
 \newcommand{\cvskill}[2]{
   \textcolor{black}{\textbf{#1}}\hfill
   \foreach \x in {1,...,5}{%
@@ -134,6 +136,13 @@
             \cvitemend
 
         \cvheading
+            {The University of Notre Dame}{South Bend, IN}
+            {Graduate Teaching Assistant}{August 2024 - Present}
+            \cvitemstart
+                \cvitem{Worked as a TA for Elements of Computing II and Principles of Computing}
+            \cvitemend
+
+        \cvheading
             {Hargrove Engineers and Constructors}{Katy, TX}
             {Controls \& Automations Engineering Intern}{May 2024 - August 2024}
             \cvitemstart
@@ -165,13 +174,24 @@
     \cvheadingend
 
 
+
+\section{Leadership and Involvement}
+    \begin{tabularx}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \tabitem Notre Dame Rock Climbing Club Member & August 2024 - Present\\
+        \tabitem Notre Dame Texas Club Member & August 2024 - Present\\
+        \tabitem Technology and Catholicism Club & August 2024 - Present\\
+        \tabitem Science Olympiad (Competitor, Proctor, Event Supervisor, and Lab Coordinator) & August 2011 - Present\\
+    \end{tabularx}\vspace{-7pt}
+
+
+
 \section{Technical Skills}
-% \cvskill{Profiecent Programming Languages}{4}
-\cvitemstart
-  \cvitem{Proficient Programming Languages: C/C++, Java, JavaScript, JSON, Julia, Python, XML}
-  \cvitem{Machine Learning \& AI: Keras, PyTorch, Scikit-learn, TensorFlow}
-  \cvitem{Other Tools \& Frameworks: ABB, Git, Honeywell, LaTeX, Linux, Microsoft Suite, OpenFOAM, ParaView}
-\cvitemend
+    % \cvskill{Profiecent Programming Languages}{4}
+    \cvitemstart
+        \cvitem{Proficient Programming Languages: C/C++, Java, JavaScript, JSON, Julia, Python, XML}
+        \cvitem{Machine Learning \& AI: Keras, PyTorch, Scikit-learn, TensorFlow}
+        \cvitem{Other Tools \& Frameworks: ABB, Git, Honeywell, LaTeX, Linux, Microsoft Suite, OpenFOAM, ParaView}
+    \cvitemend
 \vspace{-5pt}
 
 \end{document}

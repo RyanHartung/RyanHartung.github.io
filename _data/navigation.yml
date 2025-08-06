@@ -16,9 +16,12 @@ main:
 
   # - title: "Teaching"
   #   url: /teaching/    
-    
-  # - title: "Portfolio"
-  #   url: /portfolio/
+
+  - title: "Papers"
+    url: /papers/
+
+  - title: "Posters"
+    url: /posters/
         
   # - title: "Blog Posts"
   #   url: /year-archive/

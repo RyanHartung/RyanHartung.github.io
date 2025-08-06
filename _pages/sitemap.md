@@ -11,6 +11,7 @@ author_profile: true
 
 <h2>Pages</h2>
 [CV]({{ base_path }}/cv)
+[Portfolio]({{ base_path }}/portfolio)
 
 <!-- {% for post in site.pages %}
   {% include archive-single.html %}

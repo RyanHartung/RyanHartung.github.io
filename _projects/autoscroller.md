@@ -1,5 +1,7 @@
 ---
+layout: single
 title: 'Linux Autoscroller'
+author_profile: true
 date: 2025-08-02
 permalink: /projects/auto-scroller/
 tags:

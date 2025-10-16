@@ -10,8 +10,13 @@ author_profile: true
 <!-- A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well. -->
 
 <h2>Pages</h2>
+
 [Papers]({{ base_path }}/papers)
+
 [Posters]({{ base_path }}/posters)
+
+[Projects]({{ base_path }}/projects)
+
 [CV]({{ base_path }}/cv)
 
 <!-- {% for post in site.pages %}

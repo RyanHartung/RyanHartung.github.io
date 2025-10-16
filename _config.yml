@@ -27,12 +27,12 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "CS PhD student"
   location         : "South Bend, Indiana"
-  employer         : "University of Notre Dame du Lac"
+  employer         : "University of Notre Dame"
   # uri              : # URL
   email            : "rhartung@nd.edu" 
 
   # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
+  arxiv            : https://arxiv.org/a/hartung_r_1.html
   googlescholar    : "https://scholar.google.com/citations?user=aG7YWBIAAAAJ"
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0001-2961-7528"
@@ -221,6 +221,10 @@ collections:
     permalink: /:collection/:path/
   portfolio:
     output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    sort_by: date
     permalink: /:collection/:path/
   talks:
     output: true

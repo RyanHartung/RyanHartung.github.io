@@ -10,6 +10,11 @@ tags:
   - Linux
 ---
 
+## About:
+
 The goal of this project was to create a program that mimics the auto-scrolling feature in Windows. I wrote the script in Rust, and it was designed and tested on Arch Linux. 
+
+
+## Link:
 
 [Here](https://github.com/RHartung-ND/Auto-Scroll-Linux){:target="_blank"} is the link to the GitHub for it.

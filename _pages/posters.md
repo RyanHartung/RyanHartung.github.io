@@ -6,15 +6,12 @@ author_profile: true
 ---
 
 
-## xGFabric
+## xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture
 
-* Name: 
-  * xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture
-* Date:
-  * July 21, 2025
-* Location:
-  * Notre Dame, Indiana
-* Conference:
-  * HPDC 2025
-* [View poster](../files/posters/xGFabric_poster.pdf)
+* Presented at: HPDC 2025, Notre Dame, Indiana, USA
+* Date: July 21, 2025
 * [Me presenting the poster](../images/20250721_202403.jpg)
+
+<a href="../files/posters/xGFabric_poster.pdf">
+  <img src="https://img.shields.io/badge/View-Poster-blue" style="transform: scale(1.1);">
+</a>

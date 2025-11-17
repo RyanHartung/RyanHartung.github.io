@@ -3,7 +3,7 @@ layout        : project
 title         : 'Rust Compiler'
 author_profile: true
 created_on    : 2025-10-17
-last_updated  : 2025-10-23
+last_updated  : 2025-10-30
 permalink     : /projects/rust-compiler/
 tags:
   - Rust

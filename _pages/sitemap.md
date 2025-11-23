@@ -17,6 +17,8 @@ author_profile: true
 
 [Projects]({{ base_path }}/projects)
 
+[Talks]({{ base_path }}/talks)
+
 [CV]({{ base_path }}/cv)
 
 <!-- {% for post in site.pages %}

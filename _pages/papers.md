@@ -14,6 +14,8 @@ author_profile: true
 * arXiv: [arXiv:2509.20340](http://arxiv.org/abs/2509.20340){:target="_blank"}
 * Authors: L. Kurafeeva, A. Subedi, **R. Hartung**, M. Fay, A. Biswas, S. Jha, O. Kilic, C. Krintz, A. Merzky, D. Thain, M. Vuran, R. Wolski
 
-<a href="http://arxiv.org/pdf/2509.20340">
+<a href="http://arxiv.org/pdf/2509.20340"
+   target="_blank" 
+   rel="noopener noreferrer">
   <img src="https://img.shields.io/badge/Paper-Link-blue" style="transform: scale(1.1);">
 </a>

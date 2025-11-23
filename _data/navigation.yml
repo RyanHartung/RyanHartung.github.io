@@ -23,9 +23,13 @@ main:
   - title: "Posters"
     url: /posters/
 
+  - title: "Talks"
+    url: /talks/
+
   - title: "Projects"
     url: /projects/
         
+
   # - title: "Blog Posts"
   #   url: /year-archive/
     

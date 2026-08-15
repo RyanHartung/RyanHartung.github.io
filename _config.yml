@@ -26,8 +26,10 @@ author:
   name             : "Ryan Hartung"
   pronouns         : # example: "she/her"  
   bio              : "CS PhD student"
-  location         : "South Bend, Indiana"
+  location         : "Notre Dame, Indiana"
+  location_url     : "https://maps.google.com/?q=Notre+Dame,+Indiana"
   employer         : "University of Notre Dame"
+  employer_url     : "https://www.nd.edu"
   # uri              : # URL
   email            : "rhartung@nd.edu" 
 

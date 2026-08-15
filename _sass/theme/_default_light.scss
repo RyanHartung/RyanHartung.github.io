@@ -33,8 +33,6 @@ $sidebar-screen-min-width   : 1024px;
     --global-footer-bg-color            : #f2f3f3;
     --global-border-color               : #{$lighter-gray};
     --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
     --global-link-color                 : #52adc8;
     --global-link-color-hover           : mix(#000, #2f7f93, 25%);
@@ -44,5 +42,20 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+
+    /* Code Box */
+    --global-code-background-color      : #fdf6e3;
+    --global-code-text-color            : #657b83;
+    --global-code-border-color          : #000000;
+
+    /* Syntax Highlighting Tokens */
+    --syn-comment                       : #93a1a1; /* base1 */
+    --syn-keyword                       : #859900; /* green */
+    --syn-type                          : #b58900; /* yellow */
+    --syn-function                      : #268bd2; /* blue */
+    --syn-string                        : #2aa198; /* cyan */
+    --syn-number                        : #d33682; /* magenta */
+    --syn-constant                      : #cb4b16; /* orange */
+    --syn-error                         : #dc322f; /* red */
 }
 

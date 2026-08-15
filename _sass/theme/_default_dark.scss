@@ -41,8 +41,6 @@ html[data-theme="dark"] {
     --global-footer-bg-color            : #{$background};
     --global-border-color               : #{$light-gray};
     --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : #{$light-gray};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
@@ -52,5 +50,20 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
+
+    /* Code Box */
+    --global-code-background-color      : #002b36;
+    --global-code-text-color            : #839496;
+    --global-code-border-color          : #ffffff;
+
+    /* Syntax Highlighting Tokens */
+    --syn-comment                       : #586e75; /* base01 */
+    --syn-keyword                       : #859900; /* green */
+    --syn-type                          : #b58900; /* yellow */
+    --syn-function                      : #268bd2; /* blue */
+    --syn-string                        : #2aa198; /* cyan */
+    --syn-number                        : #d33682; /* magenta */
+    --syn-constant                      : #cb4b16; /* orange */
+    --syn-error                         : #dc322f; /* red */
 }
 

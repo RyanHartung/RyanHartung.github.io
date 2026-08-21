@@ -26,12 +26,12 @@ author:
   name             : "Ryan Hartung"
   pronouns         : # example: "she/her"  
   bio              : "CS PhD student"
-  location         : "Notre Dame, Indiana"
-  location_url     : "https://maps.google.com/?q=Notre+Dame,+Indiana"
+  location         : "385 Fitzpatrick Hall of Engineering, Notre Dame, IN 46556"
+  location_url     : "https://maps.app.goo.gl/y3jPKcBUoTitBk9o9"
   employer         : "University of Notre Dame"
   employer_url     : "https://www.nd.edu"
   # uri              : # URL
-  email            : "rhartung@nd.edu" 
+  email            : "rhartung@nd.edu"
 
   # Academic websites
   arxiv            : "https://arxiv.org/a/hartung_r_1.html"

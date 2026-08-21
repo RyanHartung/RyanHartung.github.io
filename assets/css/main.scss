@@ -37,3 +37,16 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+.author__urls.social-icons li {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  align-items: flex-start;
+}
+
+.author__urls.social-icons li a {
+  white-space: normal;
+  word-wrap: break-word;
+}

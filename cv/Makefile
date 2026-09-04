@@ -1,5 +1,4 @@
 build:
-	mkdir -p ~/.cache/tectonic/formats
 	tectonic cv.tex
 	mv cv.pdf Ryan_CV.pdf
 	rm *.synctex.gz

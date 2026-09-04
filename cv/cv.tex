@@ -23,15 +23,13 @@
 \usepackage{fontawesome5}
 \usepackage{ragged2e}
 \usepackage{etoolbox}
-\usepackage{tikz}
 
 % font options
 \usepackage{newpxtext}
-\linespread{1.05}  % palladio needs more leading (space between lines)
-\usepackage[T1]{fontenc}
+\linespread{1.05}
 
 \pagestyle{fancy}
-\fancyhf{}  % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -52,9 +50,8 @@
 
 % sections formatting
 \titleformat{\section}{
-  \vspace{-2pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
-
 
 % custom commands
 \newcommand{\cvitem}[1]{
@@ -72,35 +69,22 @@
 }
 
 \newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
-\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvheadingend}{\end{itemize}\vspace{-5pt}}
 \newcommand{\cvitemstart}{\begin{itemize}\justifying}
 \newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
-
-\newcommand{\tabitem}{~~\hspace{1.25em} \llap{\textbullet}~~}
-
-\newcommand{\cvskill}[2]{
-  \textcolor{black}{\textbf{#1}}\hfill
-  \foreach \x in {1,...,5}{%
-    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
-  \vspace{-2pt}
-}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
 
 \begin{document}
 
-% contact information
+% Contact Information
 \begin{center}
-    \textbf{\LARGE\scshape Ryan Hartung} \\
-    \vspace{1pt}\small
-    \href{mailto:}{rhartung@nd.edu}
-    \big|
-    \href{https://github.com/RHartung-ND}{GitHub}
-    \big|
-    \href{https://www.linkedin.com/in/ryan-hartung-19a901237/}{LinkedIn}
-    \big|
-    \href{https://orcid.org/0009-0001-2961-7528}{ORCID}
-    \big|
+    \textbf{\LARGE\scshape Ryan Hartung} \\ \vspace{3pt}
+    \small
+    \href{mailto:rhartung@nd.edu}{rhartung@nd.edu} \:\big|\:
+    \href{https://github.com/RHartung-ND}{GitHub} \:\big|\:
+    \href{https://www.linkedin.com/in/ryan-hartung-19a901237/}{LinkedIn} \:\big|\:
+    \href{https://orcid.org/0009-0001-2961-7528}{ORCID} \:\big|\:
     \href{https://ryanhartung.github.io/}{Website}
 \end{center}
 
@@ -108,100 +92,51 @@
     \cvheadingstart
         \cvheading
             {The University of Notre Dame}{Notre Dame, IN}
-            {Ph.D. in Computer Science \& Engineering}{\textit{Expected: May 2029}}
+            {Ph.D. in Computer Science \& Engineering}{\textit{Expected May 2029}}
             \cvitemstart
                 \cvitem{Advisor: Dr. Douglas Thain}
-                \cvitem{Research focus: Distributed Systems and High Performance Computing}
-                % \cvitem{Coursework: Algorithms and Complexity, Compilers and Language Design, Graduate Networks, ML \& AI: Graph Learning}
+                \cvitem{Research Focus: Distributed Systems and High-Performance Computing}
             \cvitemend
         \cvheading
             {The University of Notre Dame}{Notre Dame, IN}
             {Master of Science in Computer Science \& Engineering}{\textit{August 2025}}
-            % \cvitemstart
-                % \cvitem{Coursework: Advanced Computer Architecture, Data Science, Data Visualization, Graduate Operating Systems, Modern Web Development, Neural Networks, Secure Software Engineering, Special Topics in Advanced and Secure Networks}
-            % \cvitemend
         \cvheading
             {The University of Texas at Austin}{Austin, TX}
-            {Bachelor of Science in Physics; Computation Option}{\textit{May 2024}}
+            {Bachelor of Science in Physics (Computation Option)}{\textit{May 2024}}
             \cvitemstart
                 \cvitem{Certificate in Elements of Computing}
-                % \cvitem{Coursework in Linear Algebra, Modern Physics, Quantum Physics, Classical Electrodynamics}
             \cvitemend
     \cvheadingend
-
-
-\section{Teaching}
-    \cvheadingstart
-        \cvheading
-            {The University of Notre Dame}{Notre Dame, IN}
-            {Graduate Teaching Assistant}{August 2024 - May 2025}
-    \cvheadingend
-
-    \begin{small}
-        \begin{tabularx}{\textwidth}[h]{l@{\extracolsep{\fill}}r}
-            \tabitem Elements of Computing II & Spring 2025\\
-            \tabitem Principles of Computing & Fall 2024
-        \end{tabularx}\vspace{-7pt}
-    \end{small}
 
 
 \section{Publications}
 \begin{small}
-\begin{enumerate}
-    \item Liubov Kurafeeva, \textbf{Ryan Hartung}, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Memet Can Vuran, and Rich Wolski. 2026. Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference. \textit{arXiv preprint arXiv:2605.20532}. \url{https://arxiv.org/abs/2605.20532}
+\begin{enumerate}[align=left, itemindent=0pt]
+    \item[{[2026-5]}] Liubov Kurafeeva, \textbf{Ryan Hartung}, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Memet Can Vuran, and Rich Wolski. ``Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.'' \textit{arXiv preprint arXiv:2605.20532}. \url{https://arxiv.org/abs/2605.20532}
 
-    \item Liubov Kurafeeva, Alan Subedi, \textbf{Ryan Hartung}, Michael Fay, Avhishek Biswas, Shantenu Jha, Ozgur Kilic, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. 2025. xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture. In \textit{Proceedings of the SC '25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis} (SC Workshops '25). Association for Computing Machinery, New York, NY, USA, 2317--2327. \url{https://doi.org/10.1145/3731599.3767589}
+    \item[{[2025-11]}] Liubov Kurafeeva, Alan Subedi, \textbf{Ryan Hartung}, Michael Fay, Avhishek Biswas, Shantenu Jha, Ozgur Kilic, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture.'' In \textit{Proceedings of the SC '25 Workshops}. ACM, 2317--2327. DOI: \url{https://doi.org/10.1145/3731599.3767589}
 \end{enumerate}
 \end{small}
-
-
-\section{Talks/Panels}
-    \begin{small}
-        \textbf{(Nov. 2025)} Invited panelist at \textbf{XLOOP Workshop at SC '25} [St. Louis, MO] $=\Rightarrow$ \href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Watch Here}
-    \end{small}
-
-\section{Presentations}
-    \cvheadingstart
-        \cvheading
-            {GCASR 2026}{Evanston, IL}
-            {Attended:}{May 11, 2026}
-            \cvitemstart
-                \cvitem{Presented the following poster:}
-                \cvitemstart
-                    \cvitem{Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference}
-                \cvitemend
-            \cvitemend
-
-        \cvheading
-            {HPDC 2025}{Notre Dame, IN}
-            {Attended From:}{July 20th - July 23rd, 2025}
-            \cvitemstart
-                \cvitem{Presented the following poster:}
-                \cvitemstart
-                    \cvitem{xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture}
-                \cvitemend
-            \cvitemend
-    \cvheadingend
 
 
 \section{Research Experience}
     \cvheadingstart
         \cvheading
             {The University of Notre Dame}{Notre Dame, IN}
-            {Graduate Research Assistant}{January 2025 - Present}
+            {Graduate Research Assistant}{January 2025 -- Present}
             \cvitemstart
-                \cvitem{Assisting with the development of \href{https://sites.google.com/view/xgfabric}{xGFabric}.}
+                \cvitem{Contributing to the design and implementation of \href{https://sites.google.com/view/xgfabric}{xGFabric}, architectural framework connecting remote sensor edge networks to HPC centers via 5G.}
+                \cvitem{Developing low-latency data pipelines to facilitate real-time inference across heterogeneous edge-HPC infrastructure.}
             \cvitemend
 
         \cvheading
-            {The University of Texas at Austin}{Austin, Texas}
-            {Undergraduate Research Assistant}{June 2022 - December 2023}
+            {The University of Texas at Austin}{Austin, TX}
+            {Undergraduate Research Assistant}{June 2022 -- December 2023}
             \cvitemstart
-                \cvitem{Created an open-source program which leverages various Python packages to analyze star-spots patterns across multiple thousands of stars in a compressed algorithm. Ensured that the algorithm was expandable and efficient for large datasets (over 6,000 star systems)}
-                \cvitem{Compared the contrast ratio of star-spots from two different NASA missions (Kepler and TESS) to establish a basis for exoplanet identification}
-                \cvitem{Implemented parallel computing and multi-core processing to optimize runtime and compilation}
-                \cvitem{Published results to a public \href{https://github.com/BrownDwarf/contracosta/}{GitHub repository}}
-                \cvitem{Funded by a NASA research grant}
+                \cvitem{Engineered an open-source Python tool analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.}
+                \cvitem{Evaluated star-spot contrast ratios using observational data from NASA Kepler and TESS missions to establish baseline metrics for exoplanet detection.}
+                \cvitem{Integrated parallel processing and multi-core compilation to optimize data throughput and execution runtime.}
+                \cvitem{Published codebase and workflows to an open-source \href{https://github.com/BrownDwarf/contracosta/}{GitHub repository}; research funded by NASA grant.}
             \cvitemend
     \cvheadingend
 
@@ -229,57 +164,66 @@
     \cvheadingend
 
 
-% \section{Conferences}
-%     \cvheadingstart
-%         \cvheading
-%             {Supercomputing 2025}{St. Louis, MO}
-%             {Attended From:}{November 16th - November 20rd, 2025}
-%             \cvitemstart
-%                 \cvitem{Participated on the XLOOP Panel: \href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Watch Here}}
-%                 \cvitem{Schedule: \href{https://sc25.conference-program.com/}{Here}}
-%             \cvitemend
+\section{Talks, Panels \& Presentations}
+    \cvheadingstart
+        \cvheading
+            {XLOOP Workshop at SC '25}{St. Louis, MO}
+            {Invited Panelist}{November 16 2025}
+            \cvitemstart
+                \cvitem{Participated in expert panel on edge-to-HPC loop architectures [\href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Recording available online}].}
+            \cvitemend
 
-%         \cvheading
-%             {HPDC 2025}{Notre Dame, IN}
-%             {Attended From:}{July 20th - July 23rd, 2025}
-%             \cvitemstart
-%                 \cvitem{Presented the following poster:}
-%                 \cvitemstart
-%                     \cvitem{xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture}
-%                 \cvitemend
-%                 \cvitem{Schedule: \href{https://hpdc.sci.utah.edu/2025/program.html}{Here}}
-%             \cvitemend
+        \cvheading
+            {GCASR 2026}{Evanston, IL}
+            {Poster Presenter}{May 11, 2026}
+            \cvitemstart
+                \cvitem{Poster: \textit{Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference}.}
+            \cvitemend
 
-%         \cvheading
-%             {Throughput Computing 2025}{Madison, WI}
-%             {Attended From:}{June 2nd - June 4th, 2025}
-%             \cvitemstart
-%                 \cvitem{Schedule: \href{https://agenda.hep.wisc.edu/event/2297/timetable/\#all}{Here}}
-%             \cvitemend
-%     \cvheadingend
+        \cvheading
+            {HPDC 2025}{Notre Dame, IN}
+            {Poster Presenter}{July 21, 2025}
+            \cvitemstart
+                \cvitem{Poster: \textit{xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture}.}
+            \cvitemend
+    \cvheadingend
 
 
-\section{Leadership and Involvement}
-    \begin{tabularx}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \tabitem Society of Catholic Scientists & August 2025 - Present\\
-        \tabitem Science Policy Initiative at Notre Dame & August 2025 - Present\\
-        \tabitem Catholic Graduate Community & April 2025 - Present\\
-        \tabitem Technology and Catholicism Club & February 2025 - Present\\
-        \tabitem Notre Dame Rock Climbing Club Member & August 2024 - Present\\
-        \tabitem Notre Dame Texas Club Member & August 2024 - Present\\
-        \tabitem Science Olympiad (Competitor, Mentor, Club President, Proctor, Event- & August 2011 - Present\\
-        \hspace*{11em} Supervisor, and Lab Coordinator)
-    \end{tabularx}\vspace{-7pt}
+\section{Teaching Experience}
+    \cvheadingstart
+        \cvheading
+            {The University of Notre Dame}{Notre Dame, IN}
+            {Graduate Teaching Assistant}{August 2024 -- May 2025}
+            \cvitemstart
+                \cvitem{Elements of Computing II \hfill \textit{Spring 2025}}
+                \cvitem{Principles of Computing \hfill \textit{Fall 2024}}
+            \cvitemend
+    \cvheadingend
 
 
 \section{Technical Skills}
-    % \cvskill{Profiecent Programming Languages}{4}
     \cvitemstart
-        \cvitem{Proficient Programming Languages: C/C++, HTML, Java, JavaScript, JSON, Julia, Python, Rust, XML}
-        \cvitem{Machine Learning \& AI: Keras, PyTorch, Scikit-learn, TensorFlow}
-        \cvitem{Distributive Systems: Univa Grid Engine (UGE), HTCondor, SLURM}
-        \cvitem{Other Tools \& Frameworks: ABB, Git, Honeywell, LaTeX, Linux/UNIX, Microsoft Suite, OpenFOAM, ParaView}
+        \cvitem{\textbf{Programming Languages:} C/C++, Python, Rust, Java, JavaScript, Julia, HTML, JSON, XML}
+        \cvitem{\textbf{Machine Learning \& AI:} PyTorch, TensorFlow, Scikit-learn, Keras}
+        \cvitem{\textbf{Distributed Systems \& HPC:} SLURM, HTCondor, Univa Grid Engine (UGE)}
+        \cvitem{\textbf{Tools, Platforms \& Automation:} ABB, Git, Honeywell, \LaTeX, Linux/UNIX, Microsoft Suite, OpenFOAM, ParaView}
     \cvitemend
-\vspace{-5pt}
+
+
+\section{Leadership \& Service}
+    \begin{small}
+    \begin{tabularx}{\textwidth}{@{} X r @{}}
+        \textbf{Order of Christian Initiation of Adults (OCIA)}, Sponsor & September 2026 -- Present \\
+        \textbf{Fischer Graduate Residence Mass}, Lector & August 2025 -- May 2026 \\
+        \textbf{Society of Catholic Scientists}, Member & August 2025 -- Present \\
+        \textbf{Science Policy Initiative at Notre Dame}, Member & August 2025 -- Present \\
+        \textbf{Catholic Graduate Community}, Member & April 2025 -- Present \\
+        \textbf{Technology and Catholicism Club}, Member & February 2025 -- Present \\
+        \textbf{Notre Dame Rock Climbing Club}, Member & August 2024 -- Present \\
+        \textbf{Notre Dame Texas Club}, Member & August 2024 -- Present \\
+        \textbf{Science Olympiad}, Competitor, Mentor, Club President, Proctor & August 2011 -- Present \\
+        \hspace*{11em} Event-Supervisor, and Lab Coordinator)
+    \end{tabularx}
+    \end{small}
 
 \end{document}

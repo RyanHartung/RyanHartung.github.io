@@ -11,7 +11,7 @@ author_profile: true
 
 <h2>Pages</h2>
 
-[Papers]({{ base_path }}/papers)
+[Publications]({{ base_path }}/publications)
 
 [Posters]({{ base_path }}/posters)
 

@@ -51,19 +51,19 @@ html[data-theme="dark"] {
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
 
-    /* Code Box */
-    --global-code-background-color      : #002b36;
-    --global-code-text-color            : #839496;
-    --global-code-border-color          : #ffffff;
+/* Code Box */
+    --global-code-background-color      : #f0f7ff; /* Light bluish tint background from screenshot */
+    --global-code-text-color            : #111827; /* Dark text for brackets {}, commas, and equals = */
+    --global-code-border-color          : #e2e8f0;
 
     /* Syntax Highlighting Tokens */
-    --syn-comment                       : #586e75; /* base01 */
-    --syn-keyword                       : #859900; /* green */
-    --syn-type                          : #b58900; /* yellow */
-    --syn-function                      : #268bd2; /* blue */
-    --syn-string                        : #2aa198; /* cyan */
-    --syn-number                        : #d33682; /* magenta */
-    --syn-constant                      : #cb4b16; /* orange */
-    --syn-error                         : #dc322f; /* red */
+    --syn-comment                       : #6b7280; 
+    --syn-keyword                       : #3b6291; /* @article blue */
+    --syn-type                          : #3b6291; 
+    --syn-function                      : #168b8d;
+    --syn-string                        : #c0263f;
+    --syn-number                        : #c0263f; 
+    --syn-constant                      : #c0263f; 
+    --syn-error                         : #dc322f;
 }
 

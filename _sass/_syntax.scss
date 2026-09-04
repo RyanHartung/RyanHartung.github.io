@@ -4,8 +4,9 @@
 
 div.highlighter-rouge, figure.highlight {
   position: relative;
-  margin-bottom: 1em;
-  padding: 1em;
+  padding: 0.5em 0.75em; 
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
   border: 2px solid var(--global-code-border-color);
   border-radius: $border-radius;
   background-color: var(--global-code-background-color);
@@ -13,65 +14,65 @@ div.highlighter-rouge, figure.highlight {
   font-size: $type-size-4;
   color: white;
 
-  // &:before {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   padding: 0.5em;
-  //   border: 1px solid var(--global-code-border-color);
-  //   background-color: #ffffff;
-  //   // background-color: var(--global-bg-color);
-  //   color: #000000; 
-  //   content: "\f121";
-  //   font-family: "Font Awesome 6 Free";
-  //   font-size: $type-size-6;
-  //   line-height: 1;
-  //   text-transform: none;
-  //   speak: none;
-  // }
-
   .highlight {
     margin: 0;
+    pre {
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.4;
+    }
     font-family: $monospace;
     font-size: $type-size-6;
-    line-height: 1.8;
   }
 }
 
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 
+/* Enable word wrapping */
+div.highlighter-rouge pre.highlight,
+figure.highlight pre.highlight,
+div.highlighter-rouge code,
+figure.highlight code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-x: auto;
+}
+
 
 /* Rouge Token Mappings */
 .highlight {
   color: var(--global-code-text-color);
 
-  /* Default text nodes */
-  .g, .l, .n, .p, .x, .ge, .go, .gp, .gt, .ld, .na, .nl, .nn, .nx, .py, .w {
+  /* Default text nodes (braces, equals, commas) */
+  .g, .l, .n, .p, .x, .ge, .go, .gp, .gt, .ld, .w {
     color: var(--global-code-text-color);
   }
 
   /* Comments */
   .c, .cm, .c1, .cs, .cp { color: var(--syn-comment); }
 
-  /* Keywords & Operators */
-  .k, .kn, .kp, .o, .ow, .kd, .kr { color: var(--syn-keyword); }
+  /* Keywords & Entry Types */
+  .k, .kn, .kp, .o, .ow, .kd, .kr, .gh { 
+    color: var(--syn-keyword); 
+    font-weight: bold;
+  }
 
-  /* Types, Classes, & Declarations */
+  /* Types & Classes */
   .kt, .nc, .nd, .nt { color: var(--syn-type); }
 
-  /* Functions & Variables */
-  .nf, .nv, .bp, .vc, .vg, .vi { color: var(--syn-function); }
+  /* Field Names & Attributes */
+  .nf, .na, .nl, .bp, .vc, .vg, .vi { color: var(--syn-function); }
 
-  /* Strings & Literals */
-  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1, .ss, .sr { color: var(--syn-string); }
+  /* Keys, Strings & Values */
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1, .ss, .sr, .nv { color: var(--syn-string); }
 
   /* Numbers */
   .m, .mf, .mh, .mi, .mo, .il { color: var(--syn-number); }
 
-  /* Constants & Builtins */
-  .kc, .no, .ni, .ne, .nb, .gh, .gu { color: var(--syn-constant); }
+  /* Constants */
+  .kc, .no, .ni, .ne, .nb, .gu { color: var(--syn-constant); }
 
-  /* Errors & Diff Deleted */
+  /* Errors */
   .err, .gr, .gd { color: var(--syn-error); }
 }

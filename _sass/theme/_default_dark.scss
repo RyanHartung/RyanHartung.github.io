@@ -50,8 +50,10 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
+    --global-break-color                : #{$background-light};
 
-/* Code Box */
+
+    /* Code Box */
     --global-code-background-color      : #f0f7ff; /* Light bluish tint background from screenshot */
     --global-code-text-color            : #111827; /* Dark text for brackets {}, commas, and equals = */
     --global-code-border-color          : #e2e8f0;

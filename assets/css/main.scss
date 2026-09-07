@@ -50,3 +50,10 @@
   white-space: normal;
   word-wrap: break-word;
 }
+
+hr {
+  height: 1px !important;
+  background-color: var(--global-break-color) !important;
+  border: none !important;
+  opacity: 1 !important;
+}

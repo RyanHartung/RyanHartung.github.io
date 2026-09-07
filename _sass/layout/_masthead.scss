@@ -20,7 +20,7 @@
     position: absolute;
     bottom: 0;
     height: 1px;
-    background: var(--global-border-color);
+    background: var(--global-dark-border-color);
     width: 100%;
   }
 
@@ -70,8 +70,8 @@
   color: var(--global-text-color);
   font-weight: 700;
   border-bottom: 2px solid var(--global-text-color);
-  pointer-events: none; /* Move this here */
-  cursor: default; /* Move this here too */
+  // pointer-events: none; /* Move this here */
+  // cursor: default; /* Move this here too */
 }
 
 .masthead__menu-item.selected a:hover {

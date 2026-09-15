@@ -36,6 +36,10 @@ layout: default
         {% if page.last_updated %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].last_updated | default: "Last updated:" }}</strong> <time datetime="{{ page.last_updated | date: "%Y-%m-%d" }}">{{ page.last_updated | date: "%B %d, %Y" }}</time></p>
         {% endif %}  
+        {% if page.source %}
+          <a href="{{ page.source }}" class="btn btn--light" target="_blank"
+                rel="noopener noreferrer">View Source</a>
+        {% endif %}  
         </header>
       {% endunless %}
 

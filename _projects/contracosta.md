@@ -5,6 +5,7 @@ author_profile: true
 created_on    : 2022-06-02
 last_updated  : 2023-04-29
 permalink     : /projects/contracosta/
+source        : "https://github.com/BrownDwarf/contracosta"
 tags:
   - NASA
   - Astronomy
@@ -20,11 +21,6 @@ This was a research project that I was a part of during the Summer after my Soph
 ## Proposal:
 
 Starspots bias perceived exoplanet radii [^1]. Here we propose a systematic approach to quantify and mitigate starspot-induced exoplanet radius biases based on a large sample of spotted stars to be observed in NASA TESS Cycle 4. The approach will deliver constraints on both the typical starspot coverage fraction and the typical starspot temperature contrast, as a function of spectral type and rotation rate. This mapping can then serve as a "lookup table" for practitioners to gauge the extent to which a given source is likely to suffer from starspot-induced exoplanet radius biases. No such reliable lookup table presently exists for main sequence stars, owing to the inability of differential lightcurves to account for *total* starspot coverage fractions [^2]. This program will leverage the significant overlap of the TESS Cycle 4 fields with the K2 fields.
-
-
-## Link:
-
-[Here](https://github.com/BrownDwarf/contracosta){:target="_blank"} is the link to the GitHub for it.
 
 
 ## References:

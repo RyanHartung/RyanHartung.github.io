@@ -1,0 +1,31 @@
+name: "Make sure that the date in each project page is the most recent version"
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  publish_scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check all projects
+        run: python3 scripts/check_project_latest_date.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _projects/
+          git commit -m "Updated latest version of projects" || echo "No changes to commit"
+          git push

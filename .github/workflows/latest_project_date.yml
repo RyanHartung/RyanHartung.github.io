@@ -17,7 +17,7 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
 
       - name: Check all projects
         run: python3 scripts/check_project_latest_date.py

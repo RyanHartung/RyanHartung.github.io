@@ -3,7 +3,7 @@ layout        : project
 title         : 'Dotfiles'
 author_profile: true
 created_on    : 2026-09-09
-last_updated  : 2026-09-15
+last_updated  : 2026-09-16
 permalink     : /projects/dotfiles/
 source        : "https://github.com/RHartung-ND/dotfiles"
 tags:

@@ -1,0 +1,28 @@
+---
+layout: archive
+title: "Projects:"
+permalink: /projects/
+author_profile: true
+---
+
+<div class="timeline-container">
+  <div class="timeline-line"></div>
+
+  {% assign grouped = site.projects | sort: "created_on" | reverse %}
+  {% assign prev_year = "" %}
+
+  {% for project in grouped %}
+  {% assign project_year = project.created_on | date: "%Y" %}
+  {% if project_year != prev_year %}
+  <div class="timeline-year">{{ project_year }}</div>
+  {% assign prev_year = project_year %}
+  {% endif %}
+
+  <a href="{{ project.url }}" style="text-decoration: none; color: inherit;">
+    <div class="timeline-event">
+      <span class="timeline-date">{{ project.created_on | date: "%m-%d" }}</span>
+      <span class="timeline-title">{{ project.title }}</span>
+    </div>
+  </a>
+  {% endfor %}
+</div>

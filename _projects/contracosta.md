@@ -3,7 +3,6 @@ layout        : project
 title         : 'Contracosta'
 author_profile: true
 created_on    : 2022-06-02
-last_updated  : 2023-04-29
 permalink     : /projects/contracosta/
 source        : "https://github.com/BrownDwarf/contracosta"
 tags:

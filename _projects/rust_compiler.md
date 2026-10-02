@@ -3,7 +3,6 @@ layout        : project
 title         : 'Rust Compiler'
 author_profile: true
 created_on    : 2025-10-17
-last_updated  : 2026-09-09
 permalink     : /projects/rust-compiler/
 source        : "https://github.com/RHartung-ND/Rust-Compiler"
 tags:

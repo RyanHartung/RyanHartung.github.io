@@ -3,7 +3,6 @@ layout        : project
 title         : 'Combination Lock'
 author_profile: true
 created_on    : 2026-07-21
-last_updated  : 2026-08-14
 permalink     : /projects/combination-lock/
 source        : "https://github.com/RHartung-ND/combination-lock"
 tags:

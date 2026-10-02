@@ -3,7 +3,6 @@ layout        : project
 title         : 'Discord Bot'
 author_profile: true
 created_on    : 2020-10-04
-last_updated  : 2025-06-02
 permalink     : /projects/discord-bot/
 source        : "https://github.com/CrabPulsar/Jawesome-Street-Shark-JS-Discord-Bot"
 tags:

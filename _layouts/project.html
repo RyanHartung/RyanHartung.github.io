@@ -5,42 +5,102 @@ layout: default
 {% include base_path %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
+{% include page__hero.html %}
 {% endif %}
 
 {% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+{% unless paginator %}
+{% include breadcrumbs.html %}
+{% endunless %}
 {% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.created_on %}<meta itemprop="datePublished" content="{{ page.created_on | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.last_updated %}<meta itemprop="dateModified" content="{{ page.last_updated | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.title %}
+    <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{%
+    endif %}
+    {% if page.excerpt %}
+    <meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
+    {% endif %}
+    {% if page.created_on %}
+    <meta itemprop="datePublished" content="{{ page.created_on | date: " %B %d, %Y" }}">{% endif %}
+    {% if page.last_updated %}
+    <meta itemprop="dateModified" content="{{ page.last_updated | date: " %B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}        
-        {% if page.created_on %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].created_on | default: "Created on:" }}</strong> <time datetime="{{ page.created_on | date_to_xmlschema }}">{{ page.created_on | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      <header>
+        {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" |
+            remove: "</p>" }}</h1>{% endif %}
+        {% if page.read_time %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
         {% endif %}
-        {% if page.last_updated %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].last_updated | default: "Last updated:" }}</strong> <time datetime="{{ page.last_updated | date: "%Y-%m-%d" }}">{{ page.last_updated | date: "%B %d, %Y" }}</time></p>
-        {% endif %}  
+
         {% if page.source %}
-          <a href="{{ page.source }}" class="btn btn--light" target="_blank"
-                rel="noopener noreferrer">View Source</a>
-        {% endif %}  
-        </header>
+        <p class="page__date" id="github-created-on" style="display: none;">
+          <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ page.data.ui-text[page.locale].created_on | default: "Created on:" }}</strong>
+          <time id="github-created-date"></time>
+        </p>
+
+        <p class="page__date" id="github-last-updated" style="display: none;">
+          <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ page.data.ui-text[page.locale].last_updated
+            | default: "Last updated:" }}</strong>
+          <time id="github-commit-date"></time>
+        </p>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const sourceUrl = {{ page.source | jsonify }};
+            const match = sourceUrl ? sourceUrl.match(/github\.com\/([^\/]+)\/([^\/]+?)(?:\/|\.git|$)/) : null;
+
+            if (match) {
+              const owner = match[1];
+              const repo = match[2];
+              const apiUrl = `https://api.github.com/repos/${owner}/${repo}`;
+
+              fetch(apiUrl)
+                .then(function (response) {
+                  if (!response.ok) throw new Error("API response not OK");
+                  return response.json();
+                })
+                .then(function (data) {
+                  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+
+                  /* Populate Creation Date */
+                  if (data.created_at) {
+                    const createdDate = new Date(data.created_at);
+                    const createdEl = document.getElementById("github-created-date");
+                    if (createdEl) {
+                      createdEl.textContent = createdDate.toLocaleDateString("en-US", dateOptions);
+                      createdEl.setAttribute("datetime", createdDate.toISOString());
+                      document.getElementById("github-created-on").style.display = "block";
+                    }
+                  }
+
+                  /* Populate Repository Last Pushed/Updated Date */
+                  if (data.pushed_at) {
+                    const pushedDate = new Date(data.pushed_at);
+                    const pushedEl = document.getElementById("github-commit-date");
+                    if (pushedEl) {
+                      pushedEl.textContent = pushedDate.toLocaleDateString("en-US", dateOptions);
+                      pushedEl.setAttribute("datetime", pushedDate.toISOString());
+                      document.getElementById("github-last-updated").style.display = "block";
+                    }
+                  }
+                })
+                .catch(function (err) {
+                  console.error("Error fetching repository details:", err);
+                });
+            }
+          });
+        </script>
+        {% endif %}
+        {% if page.source %}
+        <a href="{{ page.source }}" class="btn btn--light" target="_blank" rel="noopener noreferrer">View Source</a>
+        {% endif %}
+      </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
@@ -49,7 +109,7 @@ layout: default
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
       </footer>

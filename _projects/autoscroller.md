@@ -3,7 +3,6 @@ layout        : project
 title         : 'Linux Auto-scroller'
 author_profile: true
 created_on    : 2025-06-10
-last_updated  : 2025-08-02
 permalink     : /projects/auto-scroller/
 source        : "https://github.com/RHartung-ND/Auto-Scroll-Linux"
 tags:

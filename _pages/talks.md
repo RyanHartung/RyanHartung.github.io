@@ -14,9 +14,6 @@ author_profile: true
   * Presented our research and its findings at the Department of Engery's (DOE) booth.
   * Performed a live demo in front of an audience of DOE staff, Supercomputing atendees, and fellow researchers at the DOE booth.
 
-<a href="https://docs.google.com/presentation/d/13Fzm94L1v-RnB9DdO5Y77buEzox9fS0nxzyFnHyLLUc/edit?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Slides</a>
-
-
 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
   <a href="/assets/images/SC25/2E28C539-1279-403A-965C-654EAE685313_1_105_c.jpeg" class="glightbox" data-gallery="SC25_DOE_Booth">
     <img src="/assets/images/SC25/2E28C539-1279-403A-965C-654EAE685313_1_105_c.jpeg" alt="picture 1" style="width: 100px; height: 100px; object-fit: cover; border-radius: 4px;">
@@ -32,6 +29,8 @@ author_profile: true
   </a>
 </div>
 
+<a href="https://docs.google.com/presentation/d/13Fzm94L1v-RnB9DdO5Y77buEzox9fS0nxzyFnHyLLUc/edit?usp=sharing" class="btn" target="_blank" rel="noopener noreferrer">View Slides</a>
+
 ___
 
 ## XLOOP Panel Supercomputing 2025
@@ -41,10 +40,10 @@ ___
 * About:
   * Participated in an expert panel on edge-to-HPC loop architectures
 
-<a href="https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci" class="btn" target="_blank" rel="noopener noreferrer">Watch Video</a>
-
 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
   <a href="/assets/images/SC25/image.png" class="glightbox" data-gallery="SC25_XLOOP_Panel">
     <img src="/assets/images/SC25/image.png" alt="picture 1" style="width: 100px; height: 100px; object-fit: cover; border-radius: 4px;">
   </a>
 </div>
+
+<a href="https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci" class="btn" target="_blank" rel="noopener noreferrer">Watch Video</a>

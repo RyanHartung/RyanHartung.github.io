@@ -168,6 +168,7 @@ exclude:
   - .asset-cache
   - .bundle
   - .github
+  - .vscode
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/_main.js

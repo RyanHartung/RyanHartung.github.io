@@ -154,11 +154,6 @@ author_profile: true
     transition: all 0.15s ease;
   }
 
-  .btn-academic:hover,
-  .btn-academic[aria-expanded="true"] {
-    color: var(--global-text-color);
-  }
-
   .btn-academic-peer_reviewed {
     color: var(--pub-accent);
     border-color: var(--pub-accent);
@@ -222,6 +217,32 @@ author_profile: true
     font-size: 0.7rem;
     background: #0f172a;
   }
+
+  .unloaded {
+    display: none !important;
+  }
+
+  ::highlight(search) {
+    background-color: var(--pub-accent);
+    color: #0f172a;
+  }
+
+  .bibsearch-form-input {
+    width: 100%;
+    margin: 16px 0 0;
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    background: var(--pub-surface);
+    border: 1px solid var(--pub-border);
+    border-radius: 6px;
+  }
+
+  .bibsearch-form-input:focus {
+    outline: 2px solid var(--pub-accent);
+    outline-offset: 2px;
+  }
 </style>
 
 <div class="pub-list">
@@ -233,30 +254,34 @@ author_profile: true
     </a>
   </div>
 
+  <script src="{{ '/assets/js/bibsearch.js' | relative_url }}" type="module"></script>
+  <input type="text" id="bibsearch" spellcheck="false" autocomplete="off" class="search bibsearch-form-input"
+    placeholder="Type to filter">
+
   {% if site.publication_category %}
-    {% for category in site.publication_category %}
-      {% assign title_shown = false %}
-      {% for post in site.publications reversed %}
-        {% if post.category != category[0] %}
-          {% continue %}
-        {% endif %}
+  {% for category in site.publication_category %}
+  {% assign title_shown = false %}
+  {% for post in site.publications reversed %}
+  {% if post.category != category[0] %}
+  {% continue %}
+  {% endif %}
 
-        {% unless title_shown %}
-          <h2 class="pub-category-header">{{ category[1].title }}</h2>
-          {% assign title_shown = true %}
-        {% endunless %}
+  {% unless title_shown %}
+  <h2 class="pub-category-header">{{ category[1].title }}</h2>
+  {% assign title_shown = true %}
+  {% endunless %}
 
-        <div class="pub-card">
-          {% include publication_layout.html %}
-        </div>
-      {% endfor %}
-    {% endfor %}
+  <div class="pub-card">
+    {% include publication_layout.html %}
+  </div>
+  {% endfor %}
+  {% endfor %}
   {% else %}
-    {% for post in site.publications reversed %}
-      <div class="pub-card">
-        {% include publication_layout.html %}
-      </div>
-    {% endfor %}
+  {% for post in site.publications reversed %}
+  <div class="pub-card">
+    {% include publication_layout.html %}
+  </div>
+  {% endfor %}
   {% endif %}
 
 </div>

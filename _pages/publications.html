@@ -5,28 +5,280 @@ permalink: /publications/
 author_profile: true
 ---
 
-<a href="/assets/bibliography/papers.bib" class="btn">Download Full BibTeX</a>
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-      <hr />
+<style>
+  :root {
+    --pub-accent: #38bdf8;
+    --pub-body: color-mix(in srgb, var(--global-border-color) 40%, #7a8288);
+    --pub-muted: var(--global-text-color-light);
+    --pub-border: color-mix(in srgb, var(--global-border-color) 15%, transparent);
+    --pub-surface: rgba(255, 255, 255, 0.04);
+    --pub-background: color-mix(in srgb, var(--global-thead-color) 10%, transparent);
+  }
+
+  .pub-list {
+    max-width: 760px;
+  }
+
+  /* Top bar */
+  .pub-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 16px;
+    border-bottom: 5px solid var(--pub-border);
+  }
+
+  .pub-topbar p {
+    margin: 0;
+    color: var(--pub-muted);
+    font-size: 0.95rem;
+  }
+
+  /* Category headers */
+  .pub-category-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--global-text-color);
+    margin: 48px 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--pub-border);
+  }
+
+  /* Cards */
+  .pub-card {
+    padding: 20px 12px;
+    margin: 0 -12px;
+    border-bottom: 1px solid var(--pub-border);
+    border-radius: 6px;
+    transition: background 0.15s ease;
+  }
+
+  .pub-card:last-child {
+    border-bottom: none;
+  }
+
+  .pub-card:hover {
+    background: var(--pub-background);
+  }
+
+  .pub-card .archive__item-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin: 0 0 4px !important;
+    padding-top: 0 !important;
+  }
+
+  .pub-card .archive__item-title a {
+    color: var(--global-text-color);
+    text-decoration: none;
+  }
+
+  .pub-card .archive__item-title a:hover {
+    color: var(--pub-accent);
+  }
+
+  .pub-card .archive__item-title .fa-link {
+    font-size: 0.75em;
+    color: var(--pub-muted);
+  }
+
+  /* Meta lines */
+  .pub-authors {
+    margin: 0 0 2px;
+    font-size: 0.9rem;
+    color: var(--pub-body);
+  }
+
+  .pub-authors strong {
+    color: var(--global-text-color);
+  }
+
+  .pub-meta {
+    margin: 0 0 8px;
+    font-size: 0.85rem;
+    color: var(--pub-muted);
+  }
+
+  .pub-venue {
+    font-style: italic;
+  }
+
+  .pub-citation {
+    margin: 0 0 8px;
+    font-size: 0.85rem;
+    color: var(--pub-muted);
+  }
+
+  .pub-card .archive__item-excerpt,
+  .pub-description {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--pub-body);
+  }
+
+  .pub-card .archive__item-excerpt p,
+  .pub-description p {
+    margin: 0 0 6px;
+  }
+
+  /* Buttons */
+  .pub-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .btn-academic {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none !important;
+    border-radius: 4px;
+    border: 1px solid var(--pub-border);
+    color: var(--pub-muted);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .btn-academic:hover,
+  .btn-academic[aria-expanded="true"] {
+    color: var(--global-text-color);
+  }
+
+  .btn-academic-peer_reviewed {
+    color: var(--pub-accent);
+    border-color: var(--pub-accent);
+  }
+
+  .btn-academic-peer_reviewed:hover {
+    background: var(--pub-accent);
+    color: #0f172a;
+  }
+
+  .btn-academic-preprint {
+    color: #c084fc;
+    border-color: #c084fc;
+  }
+
+  .btn-academic-preprint:hover {
+    background: #c084fc;
+    color: #0f172a;
+  }
+
+  .btn-academic-bibtex {
+    color: #F3A34D;
+    border-color: #F3A34D;
+  }
+
+  .btn-academic-bibtex:hover {
+    background: #F3A34D;
+    color: #0f172a;
+  }
+
+  .btn-academic:focus-visible {
+    outline: 2px solid var(--pub-accent);
+    outline-offset: 2px;
+  }
+
+  /* BibTeX panel */
+  .pub-bibtex {
+    position: relative;
+    margin-top: 10px;
+    font-size: 0.75rem;
+  }
+
+  .pub-bibtex figure,
+  .pub-bibtex pre {
+    margin: 0;
+  }
+
+  .pub-bibtex pre {
+    padding: 12px 14px;
+    overflow-x: auto;
+    border-radius: 6px;
+    background: var(--pub-surface);
+    color: var(--global-text-color);
+  }
+
+  .pub-bibtex-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    background: #0f172a;
+  }
+</style>
+
+<div class="pub-list">
+
+  <div class="pub-topbar">
+    <p>Full list of peer-reviewed articles, preprints, and workshop papers.</p>
+    <a href="/assets/bibliography/papers.bib" class="btn-academic btn-academic-peer_reviewed">
+      <i class="fa fa-download" aria-hidden="true"></i> Download Full BibTeX
+    </a>
+  </div>
+
+  {% if site.publication_category %}
+    {% for category in site.publication_category %}
+      {% assign title_shown = false %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+
+        {% unless title_shown %}
+          <h2 class="pub-category-header">{{ category[1].title }}</h2>
+          {% assign title_shown = true %}
+        {% endunless %}
+
+        <div class="pub-card">
+          {% include publication_layout.html %}
+        </div>
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% else %}
+    {% for post in site.publications reversed %}
+      <div class="pub-card">
+        {% include publication_layout.html %}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+</div>
+
+<script>
+  document.addEventListener('click', function (e) {
+    var toggle = e.target.closest('.js-bibtex-toggle');
+    if (toggle) {
+      var panel = document.getElementById(toggle.getAttribute('aria-controls'));
+      var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      panel.hidden = isOpen;
+      return;
+    }
+
+    var copy = e.target.closest('.js-bibtex-copy');
+    if (copy && navigator.clipboard) {
+      var code = copy.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+        copy.textContent = 'Copied';
+        setTimeout(function () { copy.textContent = 'Copy'; }, 1500);
+      });
+    }
+  });
+</script>

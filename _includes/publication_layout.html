@@ -1,0 +1,113 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% if post.doiurl %}
+  {% assign primary = "doi" %}
+{% elsif post.paperurl %}
+  {% assign primary = "paper" %}
+{% else %}
+  {% assign primary = "" %}
+{% endif %}
+
+{% assign bibtex_id = post.id | slugify | prepend: "bibtex-" %}
+
+<div class="{{ include.type | default: 'list' }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    {% if include.type == "grid" and teaser %}
+    <div class="archive__item-teaser">
+      <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
+    </div>
+    {% endif %}
+
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+      <a href="{{ post.link }}">{{ title }}</a>
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h3>
+
+    {% if post.authors %}
+    <p class="pub-authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    {% endif %}
+
+    {% if post.date or post.venue %}
+    <p class="pub-meta">
+      {% if post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %B %Y" }}</time>{% endif %}
+      {% if post.date and post.venue %}&middot;{% endif %}
+      {% if post.venue %}<span class="pub-venue">{{ post.venue }}</span>{% endif %}
+    </p>
+    {% endif %}
+
+    {% if post.read_time %}
+    <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+    <div class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</div>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    <div class="archive__item-excerpt" itemprop="description">
+      <p>{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }} <strong><a href="{{ base_path }}{{ post.url }}" rel="permalink">Read more</a></strong></p>
+    </div>
+    {% endif %}
+
+    {% if post.citation and post.authors == nil %}
+    <p class="pub-citation">{{ post.citation }}</p>
+    {% endif %}
+
+    {% if post.description %}
+    <div class="pub-description">{{ post.description | markdownify }}</div>
+    {% endif %}
+
+    <div class="pub-actions">
+      {% if post.doiurl %}
+      <a href="{{ post.doiurl }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">DOI Link</a>
+      {% endif %}
+
+      {% if post.paperurl %}
+      <a href="{{ post.paperurl }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">Paper PDF</a>
+      {% endif %}
+
+      {% if post.preprint_url %}
+      <a href="{{ post.preprint_url }}" class="btn-academic btn-academic-preprint" target="_blank" rel="noopener noreferrer">Preprint Link</a>
+      {% endif %}
+
+      {% if post.preprint_pdf %}
+      <a href="{{ post.preprint_pdf }}" class="btn-academic btn-academic-preprint" target="_blank" rel="noopener noreferrer">Preprint PDF</a>
+      {% endif %}
+
+      {% if post.slidesurl %}
+      <a href="{{ post.slidesurl }}" class="btn-academic" target="_blank" rel="noopener noreferrer">Slides</a>
+      {% endif %}
+
+      {% if post.bibtexurl %}
+      <a href="{{ post.bibtexurl }}" class="btn-academic btn-academic-bibtex" target="_blank" rel="noopener noreferrer">BibTeX file</a>
+      {% endif %}
+
+      {% if post.bibtex %}
+      <button type="button" class="btn-academic btn-academic-bibtex js-bibtex-toggle" aria-expanded="false" aria-controls="{{ bibtex_id }}">BibTeX</button>
+      {% endif %}
+    </div>
+
+    {% if post.bibtex %}
+    <div class="pub-bibtex" id="{{ bibtex_id }}" hidden>
+      <button type="button" class="btn-academic pub-bibtex-copy js-bibtex-copy">Copy</button>
+      {% highlight bibtex %}{{ post.bibtex | strip }}{% endhighlight %}
+    </div>
+    {% endif %}
+
+  </article>
+</div>

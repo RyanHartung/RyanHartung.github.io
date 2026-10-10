@@ -45,12 +45,20 @@
 }
 
 .masthead__menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
 
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+
+  #site-nav {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 

@@ -1,12 +1,12 @@
 ---
 layout: null
-permalink: /search.json
+permalink: /assets/search/search.json
 ---
 {% assign search_documents = site.pages | concat: site.posts | concat: site.projects | concat: site.publications | concat: site.talks | concat: site.teaching | concat: site.portfolio %}
 {% assign first_entry = true %}
 [
 {% for document in search_documents %}
-  {% if document.title and document.search != false and document.url != "/search.json" %}
+  {% if document.title and document.search != false and document.url != "/assets/search/search.json" %}
     {% unless first_entry %},{% endunless %}
     {% capture search_body %}{{ document.content | markdownify | strip_html | normalize_whitespace }}{% endcapture %}
     {% capture search_title %}{{ document.title | markdownify | strip_html | normalize_whitespace }}{% endcapture %}

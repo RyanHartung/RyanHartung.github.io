@@ -41,6 +41,17 @@ ninja-keys {
   --ninja-modal-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
+::highlight(site-search) {
+  background-color: rgba(250, 204, 21, 0.75);
+  color: inherit;
+}
+
+mark.site-search-highlight {
+  border-radius: 2px;
+  background-color: rgba(250, 204, 21, 0.75);
+  color: inherit;
+}
+
 @media (max-width: 600px) {
   ninja-keys {
     --ninja-top: 4vh;

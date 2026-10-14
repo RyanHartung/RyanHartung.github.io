@@ -56,7 +56,7 @@
     <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-    {% if post.excerpt and site.read_more != 'enabled' %}
+    <!-- {% if post.excerpt and site.read_more != 'enabled' %}
     <div class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</div>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <div class="archive__item-excerpt" itemprop="description">
@@ -70,7 +70,7 @@
 
     {% if post.description %}
     <div class="pub-description">{{ post.description | markdownify }}</div>
-    {% endif %}
+    {% endif %} -->
 
     <div class="pub-actions">
       {% if post.doiurl %}
@@ -97,12 +97,17 @@
       <a href="{{ post.bibtexurl }}" class="btn-academic btn-academic-bibtex" target="_blank" rel="noopener noreferrer">BibTeX file</a>
       {% endif %}
 
-      {% if post.bibtex %}
+      {% if post.bibID or post.bibtex %}
       <button type="button" class="btn-academic btn-academic-bibtex js-bibtex-toggle" aria-expanded="false" aria-controls="{{ bibtex_id }}">BibTeX</button>
       {% endif %}
     </div>
 
-    {% if post.bibtex %}
+    {% if post.bibID %}
+    <div class="pub-bibtex" id="{{ bibtex_id }}" data-bibtex-id="{{ post.bibID | escape }}" data-bibtex-url="{{ '/assets/bibliography/papers.bib' | relative_url }}" hidden>
+      <button type="button" class="btn-academic pub-bibtex-copy js-bibtex-copy">Copy</button>
+      {% highlight bibtex %}<pre><code></code></pre>{% endhighlight %}
+    </div>
+    {% elsif post.bibtex %}
     <div class="pub-bibtex" id="{{ bibtex_id }}" hidden>
       <button type="button" class="btn-academic pub-bibtex-copy js-bibtex-copy">Copy</button>
       {% highlight bibtex %}{{ post.bibtex | strip }}{% endhighlight %}

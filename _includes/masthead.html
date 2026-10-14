@@ -24,12 +24,13 @@
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
-      <button id="site-search-open" class="global-search-trigger" type="button" aria-label="Search this site (Control or Command+K)" aria-haspopup="dialog" data-index="{{ '/assets/search/search.json' | relative_url }}" disabled>
+      <button id="site-search-open" class="global-search-trigger" type="button" aria-label="Search this site (/)" aria-haspopup="dialog" data-index="{{ '/assets/search/search.json' | relative_url }}" disabled>
         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-        <span>Search</span>
-        <kbd>Ctrl/⌘ K</kbd>
+        <span>Type</span>
+        <kbd>/</kbd>
+        <span>to search</span>
       </button>
     </div>
   </div>
 </div>
-<ninja-keys id="site-search-modal" placeholder="Search pages, projects, publications..." hideBreadcrumbs></ninja-keys>
+<ninja-keys id="site-search-modal" openHotkey="/" placeholder="Search pages, projects, publications..." hideBreadcrumbs></ninja-keys>

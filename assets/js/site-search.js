@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       ? source.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())
       : -1;
 
-    // no match in the body (or no query yet): show the start of the page
+    /* no match in the body (or no query yet): show the start of the page */
     if (index < 0) {
       return wrap(escapeHtml(source.slice(0, 180)) + (source.length > 180 ? "…" : ""));
     }
@@ -99,6 +99,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     await import("https://unpkg.com/ninja-keys@1.2.2?module");
     await customElements.whenDefined("ninja-keys");
+    searchModal.openHotkey = "/";
+    searchModal._unregisterInternalHotkeys?.();
+    searchModal._registerInternalHotkeys?.();
     searchModal.placeholder = "Search this site…";
     searchModal.hideBreadcrumbs = true;
     searchButton.disabled = false;

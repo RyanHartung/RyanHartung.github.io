@@ -1,5 +1,3 @@
-import { highlightSearchTerm } from "./highlight-search-term.js";
-
 document.addEventListener("DOMContentLoaded", async () => {
   const searchModal = document.getElementById("site-search-modal");
   const searchButton = document.getElementById("site-search-open");

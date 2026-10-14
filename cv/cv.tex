@@ -9,14 +9,15 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\definecolor{linkblue}{RGB}{0, 51, 128}
 \usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
-            citecolor = blue,
-            anchorcolor = blue]{hyperref}
+            linkcolor = linkblue,
+            urlcolor  = linkblue,
+            citecolor = linkblue,
+            anchorcolor = linkblue]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -31,6 +32,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
+\fancyfoot[R]{\footnotesize\color{gray} Ryan Hartung \textbar\ Page \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -46,7 +48,7 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-\setlength{\footskip}{5pt}
+\setlength{\footskip}{14pt}
 
 % sections formatting
 \titleformat{\section}{
@@ -112,9 +114,9 @@
 \section{Publications}
 \begin{small}
 \begin{enumerate}[align=left, itemindent=0pt]
-    \item[{[2026-05]}] Liubov Kurafeeva, \textbf{Ryan Hartung}, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Memet Can Vuran, and Rich Wolski. ``Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.'' \textit{arXiv preprint arXiv:2605.20532}. \url{https://arxiv.org/abs/2605.20532}
+    \item[{[2026]}] Liubov Kurafeeva, \textbf{Ryan Hartung}, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.'' \textit{arXiv preprint arXiv:2605.20532}. \url{https://arxiv.org/abs/2605.20532}
 
-    \item[{[2025-11]}] Liubov Kurafeeva, Alan Subedi, \textbf{Ryan Hartung}, Michael Fay, Avhishek Biswas, Shantenu Jha, Ozgur Kilic, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture.'' In \textit{Proceedings of the SC '25 Workshops}. ACM, 2317--2327. DOI: \url{https://doi.org/10.1145/3731599.3767589}
+    \item[{[2025]}] Liubov Kurafeeva, Alan Subedi, \textbf{Ryan Hartung}, Michael Fay, Avhishek Biswas, Shantenu Jha, Ozgur Kilic, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture.'' In \textit{Proceedings of the SC '25 Workshops}. ACM, 2317--2327. DOI: \url{https://doi.org/10.1145/3731599.3767589}
 \end{enumerate}
 \end{small}
 
@@ -125,7 +127,7 @@
             {The University of Notre Dame}{Notre Dame, IN}
             {Graduate Research Assistant}{January 2025 -- Present}
             \cvitemstart
-                \cvitem{Contributing to the design and implementation of \href{https://sites.google.com/view/xgfabric}{xGFabric}, architectural framework connecting remote sensor edge networks to HPC centers via 5G.}
+                \cvitem{Contributing to the design and implementation of \href{https://sites.google.com/view/xgfabric}{xGFabric}, an architectural framework connecting remote sensor edge networks to HPC centers via 5G.}
                 \cvitem{Developing low-latency data pipelines to facilitate real-time inference across heterogeneous edge-HPC infrastructure.}
             \cvitemend
 
@@ -147,17 +149,17 @@
             {Hargrove Engineers and Constructors}{Katy, TX}
             {Controls \& Automations Engineering Intern}{May 2024 -- August 2024}
             \cvitemstart
-                \cvitem{Automated the migration of 200,000+ lines of Dow MOD5 code into Honeywell Experion without the loss of functionality.}
-                \cvitem{Tracked, analyzed, and documented over 7,000 variables to design and draw comprehensive flow diagrams to visualize variable definitions.}
-                \cvitem{Developed multiple algorithms to expedite the migration and variable mapping processes, improving overall efficiency.}
+                \cvitem{Automated the migration of 200,000+ lines of Dow MOD5 code into Honeywell Experion with no loss of functionality.}
+                \cvitem{Tracked, analyzed, and documented over 7,000 variables to design flow diagrams visualizing variable definitions.}
+                \cvitem{Developed several algorithms to expedite the migration and variable mapping processes, improving overall efficiency.}
             \cvitemend
 
         \cvheading
             {Hargrove Engineers and Constructors}{Katy, TX}
             {Controls \& Automations Engineering Intern}{May 2023 -- August 2023}
             \cvitemstart
-                \cvitem{Instantiated existing library modules to complete the upcoming Reactor and Train configuration for Westlake's PVC plant.}
-                \cvitem{Performed safety testing on all module and sequence configurations using internal procedures on simulated ABB hardware.}
+                \cvitem{Instantiated existing library modules to complete Westlake's PVC plant Reactor and Train configuration.}
+                \cvitem{Performed safety testing on all module and sequence configurations on simulated ABB hardware.}
                 \cvitem{Successfully configured Modbus communication between the ABB and HIMA system controllers.}
                 \cvitem{Updated structured text configuration to handle cross-controller communications.}
             \cvitemend
@@ -176,14 +178,22 @@
         \cvheading
             {Supercomputing '25}{St. Louis, MO}
             {Presenter and Demonstrator}{November 17 -- 19, 2025}
-            \cvitemstart
-                \cvitem{Presented our research and its findings at the Department of Engery's (DOE) booth.}
-                \cvitem{Performed a live demo in front of an audience of DOE staff, Supercomputing atendees, and fellow researchers at the DOE booth.}
-            \cvitemend
+            \begin{small}
+                \begin{itemize}[itemindent=0pt]
+                    \item Presented xGFabric and its findings at the Department of Energy's (DOE) booth.
+                    \item Gave a live demo to DOE staff, SC attendees, and fellow researchers, showcasing:
+                    \begin{itemize}
+                        \item{Real-time data transfer between a Raspberry Pi and a 5G sensor, with live latency and throughput metrics.}
+                        \item The full end-to-end pipeline: fetching and parsing data, launching simulations, and rending results.
+                    \end{itemize}
+                \end{itemize}
+            \end{small}
 
-            \small{Invited Panelist \hfill November 16, 2025}\vspace{-7pt}
+        \cvheading
+            {Supercomputing '25}{St. Louis, MO}
+            {Invited Panelist}{November 16, 2025}
             \cvitemstart
-                \cvitem{Participated in an expert panel on edge-to-HPC loop architectures during the XLOOP Workshop [\href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Recording available online}].}
+                \cvitem{Participated in an expert panel on edge-to-HPC loop architectures and the future of computing during the XLOOP Workshop [\href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Recording available online}].}
             \cvitemend
 
         \cvheading
@@ -200,40 +210,21 @@
         \cvheading
             {The University of Notre Dame}{Notre Dame, IN}
             {Graduate Teaching Assistant}{August 2024 -- May 2025}
-            \cvitemstart
-                \cvitem{Elements of Computing II \hfill \textit{Spring 2025}}
-
-                \begin{small}
-                    Class Size: 37
-
-                    Responsibilities:
-
-                    \hspace*{2em} - Grading
-
-                    \hspace*{2em} - Office Hours
-
-                    \hspace*{2em} - Attend class and help students with coding
-                \end{small}
-                \cvitem{Principles of Computing \hfill \textit{Fall 2024}}
-
-                \begin{small}
-                    Class Size: 35
-
-                    Responsibilities:
-                    
-                    \hspace*{2em} - Grading
-                \end{small}
-            \cvitemend
+            \begin{small}
+                \begin{itemize}
+                    \item CSE 10102; Elements of Computing II (Spring 2025): 37 students; held office hours, graded, assisted with in-class coding.
+                    \item CSE 10001; Principles of Computing (Fall 2024): 35 students; proctored exams and graded.
+                \end{itemize}
+            \end{small}
     \cvheadingend
 
 
 \section{Technical Skills}
     \cvitemstart
-        \cvitem{\textbf{Programming Languages:} C/C++, Python, Rust, Java, JavaScript/NodeJS}
-        \cvitem{\textbf{Web Development:} CSS, HTML, JSON, XML}
-        \cvitem{\textbf{Machine Learning \& AI:} PyTorch, TensorFlow, Scikit-learn, Keras}
-        \cvitem{\textbf{Distributed Systems \& HPC:} CUDA, HTCondor, OpenMP, SIMD, SLURM, Univa Grid Engine (UGE)}
-        \cvitem{\textbf{Tools, Platforms \& Automation:} ABB, Git, Honeywell, \LaTeX, Linux/UNIX, Microsoft Suite, OpenFOAM, ParaView}
+        \cvitem{\textbf{Programming Languages:} Bash, C, Python, Rust, Java, JavaScript/NodeJS, SQL}
+        \cvitem{\textbf{Web Development:} CSS, Django, HTML, Jekyll, React}
+        \cvitem{\textbf{Batch Schedulers:} HTCondor, SLURM, Univa Grid Engine (UGE)}
+        \cvitem{\textbf{Tools \& Platforms:} ABB, Docker, Git, Honeywell, \LaTeX, Linux/UNIX, MPI, OpenFOAM, OpenMP, ParaView}
     \cvitemend
 
 
@@ -248,8 +239,7 @@
         \textbf{Technology and Catholicism Club}, Member & February 2025 -- Present \\
         \textbf{Notre Dame Rock Climbing Club}, Member & August 2024 -- Present \\
         \textbf{Notre Dame Texas Club}, Member & August 2024 -- Present \\
-        \textbf{Science Olympiad}, Competitor, Mentor, Club President, Proctor & August 2011 -- Present \\
-        \hspace*{11em} Event-Supervisor, and Lab Coordinator)
+        \textbf{Science Olympiad}, Competitor, Mentor, President, Event Supervisor, and Lab Coordinator & August 2011 -- Present \\
     \end{tabularx}
     \end{small}
 

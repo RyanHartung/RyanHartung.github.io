@@ -1,0 +1,152 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\definecolor{linkblue}{RGB}{0, 51, 128}
+\usepackage[colorlinks = true,
+            linkcolor = linkblue,
+            urlcolor  = linkblue,
+            citecolor = linkblue,
+            anchorcolor = linkblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{newpxtext}
+\linespread{1.05}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small\textit{#3} & \small \textit{#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+% Contact Information
+\begin{center}
+    \textbf{\LARGE\scshape Ryan Hartung} \\ \vspace{3pt}
+    \small
+    (713) 449-9492 \:\big|\:
+    \href{mailto:rhartung@nd.edu}{rhartung@nd.edu} \:\big|\:
+    \href{https://github.com/RHartung-ND}{github.com/RHartung-ND} \:\big|\:
+    \href{https://www.linkedin.com/in/ryanhartung/}{linkedin.com/in/ryanhartung} \:\big|\:
+    South Bend, IN
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Notre Dame}{Notre Dame, IN}
+      {Ph.D. in Computer Science \& Engineering}{Expected May 2029}
+      \resumeItemListStart
+        \resumeItem{M.S. in Computer Science \& Engineering (August 2025)}
+        \resumeItem{Research Focus: Portability, Reliability, and Scalability of Distributed Systems and High-Performance Computing}
+      \resumeItemListEnd
+    \resumeSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {Bachelor of Science in Physics (Computation Option)}{Aug 2020 -- May 2024}
+      \resumeItemListStart
+        \resumeItem{Certificate in Elements of Computing}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages:} Bash, C, Java, JavaScript/NodeJS, Python, Rust, SQL \\
+     \textbf{Web Development:} CSS, Django, HTML, Jekyll, React \\
+     \textbf{Technologies:} ABB, Docker, Git, Honeywell, Linux/UNIX, MPI, OpenFOAM, OpenMP, ParaView \\
+     \textbf{Languages:} Intermediate Spanish \\
+    }}
+  \end{itemize}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {The University of Notre Dame}{Notre Dame, IN}
+      {Graduate Research Assistant}{Jan 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Contributed to the design and implementation of xGFabric, an architectural framework connecting remote sensor edge networks to HPC centers via 5G.}
+        \resumeItem{Developing low-latency data pipelines to facilitate real-time inference across heterogeneous edge-HPC infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Hargrove Engineers and Constructors}{Katy, TX}
+      {Controls \& Automations Engineering Intern}{May 2024 -- Aug 2024}
+      \resumeItemListStart
+        \resumeItem{Automated the migration of 200,000+ lines of Dow MOD5 to Honeywell Experion with no loss of functionality.}
+        \resumeItem{Tracked, analyzed, and documented over 7,000 variables to design flow diagrams visualizing variable definitions.}
+        \resumeItem{Developed several algorithms to expedite migration and variable mapping processes, improving overall efficiency.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Hargrove Engineers and Constructors}{Katy, TX}
+      {Controls \& Automations Engineering Intern}{May 2023 -- Aug 2023}
+      \resumeItemListStart
+        \resumeItem{Instantiated existing library modules to complete Westlake's PVC plant Reactor and Train configuration.}
+        \resumeItem{Performed safety testing on all module and sequence configurations on simulated ABB hardware.}
+        \resumeItem{Successfully configured Modbus communication between the ABB and HIMA system controllers.}
+        \resumeItem{Updated structured text configuration to handle cross-controller communications.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {Undergraduate Research Assistant}{Jun 2022 -- Dec 2023}
+      \resumeItemListStart
+        \resumeItem{Engineered an open-source Python tool analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.}
+        \resumeItem{Evaluated star-spot contrast ratios using observational data from NASA Kepler and TESS missions to establish baseline metrics for exoplanet detection.}
+        \resumeItem{Integrated parallel processing and multi-core compilation to optimize data throughput and execution runtime.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Selected Publications, Presentations \& Leadership}
+    \begin{small}
+        \begin{tabularx}{\textwidth}{@{} X r @{}}
+            \textbf{Publications:} Co-authored ``Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference'' and ``xGFabric: Coupling Sensor Networks and HPC Facilities...''. & 2025 \& 2026 \\
+            \textbf{Supercomputing '25:} Invited panelist on edge-to-HPC loop architectures; demonstrated real-time end-to-end data transfer and simulation pipelines at the Department of Energy booth. & Nov 2025 \\
+            \textbf{Academic Leadership:} Graduate TA for Elements of Computing II and Principles of Computing. & 2024 -- 2025 \\
+            \textbf{Community Leadership:} Science Olympiad Competitor, President, Event Supervisor, and Lab Coordinator & 2011 -- Present \\
+            \textbf{Club Involvement:} Member of several STEM, sports, and faith related clubs & 2024 -- Present \\
+        \end{tabularx}
+    \end{small}
+
+\end{document}

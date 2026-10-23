@@ -1,7 +1,7 @@
 ---
 title: "Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference"
 collection: publications
-category: conferences
+category: preprints
 permalink: /publications/2026-Hybrid-Edge
 date: 2026-05-19
 authors: "Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Memet Can Vuran, and Rich Wolski"

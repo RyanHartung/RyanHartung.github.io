@@ -12,5 +12,4 @@ tags:
 
 ## About:
 
-The goal of this project was to create a compiler for a simple programming language using Rust.
-
+The goal of this project was to convert the [bminor compiler](https://dthain.github.io/compilers-fa25/bminor) from the [Fall 2025 Compilers and Language Design course](https://dthain.github.io/compilers-fa25/) taught by Dr. Thain from C to Rust.

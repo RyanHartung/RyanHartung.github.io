@@ -70,9 +70,9 @@ redirect_from:
 
 - Research Focus: Distributed Systems and High-Performance Computing
 
-### The University of Notre Dame — Notre Dame, IN
-
-**Master of Science in Computer Science & Engineering** — *August 2025*
+|                                     |            |
+|:------------------------------------|-----------:|
+| M.S. Computer Science & Engineering | *Aug 2025* |
 
 ### The University of Texas at Austin — Austin, TX
 
@@ -81,6 +81,8 @@ redirect_from:
 - Certificate in Elements of Computing
 
 ## Publications
+
+- **2026** — Liubov Kurafeeva, Benjamin Carter, **Ryan Hartung**, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Can Vuran, and Rich Wolski. “GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.” In *Proceedings of IEEE SCTech 2026*. (To appear).
 
 - **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.” *arXiv preprint arXiv:2605.20532*. <https://arxiv.org/abs/2605.20532>
 
@@ -132,6 +134,12 @@ redirect_from:
 
 - Updated structured text configuration to handle cross-controller communications.
 
+### Harris County — Houston, TX
+
+**Elections Clerk** — May 2022 & Dec 2023
+
+- Helped during setup, dayof, takedown, and dropoff of ballots.
+
 ## Talks, Panels, & Presentations
 
 ### GCASR 2026 — Evanston, IL
@@ -142,7 +150,9 @@ redirect_from:
 
 ### Supercomputing ’25 — St. Louis, MO
 
-**Presenter and Demonstrator** — November 17 – 19, 2025
+**Presenter, Demonstrator, and Panelist** — November 16 – 19, 2025
+
+- Participated in an expert panel on edge-to-HPC loop architectures and the future of computing during the XLOOP Workshop \[[Recording available online](https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci)\].
 
 - Presented xGFabric and its findings at the Department of Energy’s (DOE) booth.
 
@@ -151,12 +161,6 @@ redirect_from:
   - Real-time data transfer between a Raspberry Pi and a 5G sensor, with live latency and throughput metrics.
 
   - The full end-to-end pipeline: fetching and parsing data, launching simulations, and rending results.
-
-### Supercomputing ’25 — St. Louis, MO
-
-**Invited Panelist** — November 16, 2025
-
-- Participated in an expert panel on edge-to-HPC loop architectures and the future of computing during the XLOOP Workshop \[[Recording available online](https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci)\].
 
 ### HPDC 2025 — Notre Dame, IN
 
@@ -178,7 +182,7 @@ redirect_from:
 
 - **Programming Languages:** Bash, C, Python, Rust, Java, JavaScript/NodeJS, SQL
 
-- **Web Development:** CSS, Django, HTML, Jekyll, React
+- **Web Development:** CSS, HTML, Jekyll, React
 
 - **Batch Schedulers:** HTCondor, SLURM, Univa Grid Engine (UGE)
 

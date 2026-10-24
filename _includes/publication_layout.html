@@ -12,9 +12,9 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if post.doiurl %}
+{% if post.doi_url %}
   {% assign primary = "doi" %}
-{% elsif post.paperurl %}
+{% elsif post.paper_url %}
   {% assign primary = "paper" %}
 {% else %}
   {% assign primary = "" %}
@@ -73,28 +73,31 @@
     {% endif %} -->
 
     <div class="pub-actions">
-      {% if post.doiurl %}
-      <a href="{{ post.doiurl }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">DOI Link</a>
+      <a href="/assets/papers/{{ post.bibID }}.pdf" class="btn-academic btn-academic-local" target="_blank"
+        rel="noopener noreferrer">PDF</a>
+
+      {% if post.doi_url %}
+      <a href="{{ post.doi_url }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">DOI</a>
       {% endif %}
 
-      {% if post.paperurl %}
-      <a href="{{ post.paperurl }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">Paper PDF</a>
-      {% endif %}
+      <!-- {% if post.paper_url %}
+      <a href="{{ post.paper_url }}" class="btn-academic btn-academic-peer_reviewed" target="_blank" rel="noopener noreferrer">Paper PDF</a>
+      {% endif %} -->
 
       {% if post.preprint_url %}
-      <a href="{{ post.preprint_url }}" class="btn-academic btn-academic-preprint" target="_blank" rel="noopener noreferrer">Preprint Link</a>
+      <a href="{{ post.preprint_url }}" class="btn-academic btn-academic-preprint" target="_blank" rel="noopener noreferrer">Preprint</a>
       {% endif %}
 
-      {% if post.preprint_pdf %}
+      <!-- {% if post.preprint_pdf %}
       <a href="{{ post.preprint_pdf }}" class="btn-academic btn-academic-preprint" target="_blank" rel="noopener noreferrer">Preprint PDF</a>
+      {% endif %} -->
+
+      {% if post.slides_url %}
+      <a href="{{ post.slides_url }}" class="btn-academic" target="_blank" rel="noopener noreferrer">Slides</a>
       {% endif %}
 
-      {% if post.slidesurl %}
-      <a href="{{ post.slidesurl }}" class="btn-academic" target="_blank" rel="noopener noreferrer">Slides</a>
-      {% endif %}
-
-      {% if post.bibtexurl %}
-      <a href="{{ post.bibtexurl }}" class="btn-academic btn-academic-bibtex" target="_blank" rel="noopener noreferrer">BibTeX file</a>
+      {% if post.bibtex_url %}
+      <a href="{{ post.bibtex_url }}" class="btn-academic btn-academic-bibtex" target="_blank" rel="noopener noreferrer">BibTeX file</a>
       {% endif %}
 
       {% if post.bibID or post.bibtex %}

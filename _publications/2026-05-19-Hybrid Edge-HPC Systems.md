@@ -6,11 +6,11 @@ permalink: /publications/2026-Hybrid-Edge
 date: 2026-05-19
 authors: "Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Memet Can Vuran, and Rich Wolski"
 venue: "arXiv preprint, arXiv:2605.20532"
-# doiurl: ''
-# paperurl: ''
+bibID: kurafeeva2026hybrid
+# doi_url: ''
+# paper_url: ''
 preprint_url: 'https://doi.org/10.48550/arXiv.2605.20532'
 preprint_pdf: 'https://arxiv.org/pdf/2605.20532'
-bibID: kurafeeva2026hybrid
 ---
 
 ## Abstract
@@ -26,8 +26,7 @@ The authors evaluate RBF in a digital-agriculture deployment that combines edge 
 - **Authors:** {{ page.authors }}
 - **Publication:** arXiv preprint, arXiv:2605.20532 (2026)
 - **Subject area:** Distributed, Parallel, and Cluster Computing (cs.DC)
-- **Identifier:** [arXiv:2605.20532](https://arxiv.org/abs/2605.20532)
-- **PDF:** [Download the preprint](https://arxiv.org/pdf/2605.20532)
+- **Preprint:** [Read on arXiv](https://arxiv.org/abs/2509.20340)
 
 ## Citation
 

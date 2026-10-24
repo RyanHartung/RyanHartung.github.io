@@ -1,0 +1,284 @@
+%------------------------
+% Ethan's Résumé Template
+% Author: necusjz
+% License: CC-BY-4.0
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\definecolor{linkblue}{RGB}{0, 51, 128}
+\usepackage[colorlinks = true,
+            linkcolor = linkblue,
+            urlcolor  = linkblue,
+            citecolor = linkblue,
+            anchorcolor = linkblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+
+% font options
+\usepackage{newpxtext}
+\linespread{1.05}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\fancyfoot[R]{\footnotesize\color{gray} Ryan Hartung \textbar\ Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{14pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% custom commands
+\newcommand{\docItem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\docSubheading}[4]{
+  \vspace{-2pt}
+\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \small\textit{#3} & \small \textit{#4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\docSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\docSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\docItemListStart}{\begin{itemize}\justifying}
+\newcommand{\docItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% Contact Information
+\begin{center}
+    \textbf{\LARGE\scshape Ryan Hartung} \\ \vspace{3pt}
+    \small
+    U.S. Citizen \:\big|\: South Bend, IN \:\big|\: (713) 449-9492 \:\big|\: \href{mailto:rhartung@nd.edu}{rhartung@nd.edu} \\ \vspace{2pt}
+    \href{https://github.com/RHartung-ND}{github.com/RHartung-ND} \:\big|\: \href{https://www.linkedin.com/in/ryanhartung/}{linkedin.com/in/ryanhartung} \:\big|\: \href{https://ryanhartung.github.io/}{ryanhartung.github.io}
+\end{center}
+
+\section{Education}
+  \docSubHeadingListStart
+    \docSubheading
+      {The University of Notre Dame}{Notre Dame, IN}
+      {Ph.D. in Computer Science \& Engineering}{Expected May 2029}
+      \docItemListStart
+        \docItem{Advisor: Dr. Douglas Thain}
+        \docItem{Research Focus: Portability, Reliability, and Scalability of Distributed and High-Performance Systems}
+      \docItemListEnd
+
+    \begin{small}
+      \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textit{M.S. in Computer Science \& Engineering} & \textit{Aug 2024 -- Aug 2025}\\
+      \end{tabular*}
+    \end{small}\vspace{-22pt}
+    \docItemListStart
+      \docItem{Master's Project: HPC integration and multi-site portability for the xGFabric framework}
+    \docItemListEnd
+
+    \docSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {B.S. in Physics (Computation Option)}{Aug 2020 -- May 2024}
+      \docItemListStart
+        \docItem{Certificate in Elements of Computing}
+      \docItemListEnd
+  \docSubHeadingListEnd
+
+
+\section{Publications}
+  \begin{small}
+    \begin{enumerate}[align=left, itemindent=0pt]
+      \item[{[2026]}] Liubov Kurafeeva, Benjamin Carter, \textbf{Ryan Hartung}, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.'' In \textit{Proceedings of IEEE SCTech 2026} (To appear).
+      \item[{[2026]}] Liubov Kurafeeva, \textbf{Ryan Hartung}, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.'' \textit{arXiv preprint arXiv:2605.20532}. \url{https://arxiv.org/abs/2605.20532}
+      \item[{[2025]}] Liubov Kurafeeva, Alan Subedi, \textbf{Ryan Hartung}, Michael Fay, Avhishek Biswas, Shantenu Jha, Ozgur Kilic, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. ``xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture.'' In \textit{Proceedings of the SC '25 Workshops}. ACM, 2317--2327. DOI: \url{https://doi.org/10.1145/3731599.3767589}
+    \end{enumerate}
+  \end{small}
+
+
+\section{Research Experience}
+  \docSubHeadingListStart
+    \docSubheading
+      {The University of Notre Dame}{Notre Dame, IN}
+      {Graduate Research Assistant, Cooperative Computing Lab}{Jan 2025 -- Present}
+      \docItemListStart
+        \docItem{Engineered the HPC integration pipeline for xGFabric, enabling real-time streaming of remote 5G sensor data directly into Computational Fluid Dynamics (CFD) simulations.}
+        \docItem{Standardized multi-site deployment across 4 supercomputing facilities (ND CRC, Purdue Anvil, TACC Stampede3, NERSC Perlmutter), resolving cross-platform incompatibilities in hardware, OSs, and batch schedulers.}
+        \docItem{Converted sequential Bash scripts into a production-ready Makeflow/Work Queue workflow, co-scheduling 72 concurrent OpenFOAM jobs at NERSC and meeting the 2-hour turnaround deadline for surrogate ML model inference (PINN/FNO/PCR).}
+        \docItem{Ported the workflow to HTCondor and implemented a \href{https://github.com/cooperative-computing-lab/cctools/pull/4546}{``wait-for-workers''} feature in Work Queue and TaskVine (CCTools), bringing \texttt{salloc}-style co-scheduling to throughput computing.}
+        \docItem{Built a proof-of-concept Random Forest model predicting queue wait times for 4--64 core jobs, trained on multi-month queue data collected across 3 HPC sites.}
+        \docItem{Identified OpenFOAM simulation as the pipeline's latency bottleneck; profiled scaling from 1--64 cores across 1--4 nodes and found single-node 32--64 core runs minimized turnaround, outperforming multi-node runs.}
+      \docItemListEnd
+
+    \docSubheading
+      {The University of Texas at Austin}{Austin, TX}
+      {Undergraduate Research Assistant}{June 2022 -- December 2023}
+        \docItemListStart
+          \docItem{Engineered an open-source Python tool analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.}
+          \docItem{Evaluated star-spot contrast ratios using observational data from NASA Kepler and TESS missions to establish baseline metrics for exoplanet detection.}
+          \docItem{Integrated parallel processing and multi-core compilation to optimize data throughput and execution runtime.}
+          \docItem{Published codebase and workflows to an open-source \href{https://github.com/BrownDwarf/contracosta/}{GitHub repository}; research funded by NASA grant.}
+        \docItemListEnd
+  \docSubHeadingListEnd
+
+
+\section{Work Experience}
+  \docSubHeadingListStart
+    \docSubheading
+      {Hargrove Engineers and Constructors}{Katy, TX}
+      {Controls \& Automations Engineering Intern}{May 2024 -- August 2024}
+        \docItemListStart
+          \docItem{Automated the migration of 200,000+ lines of Dow MOD5 code into Honeywell Experion with no loss of functionality.}
+          \docItem{Tracked, analyzed, and documented over 7,000 variables to design flow diagrams visualizing variable definitions.}
+          \docItem{Developed several algorithms to expedite the migration and variable mapping processes, improving overall efficiency.}
+        \docItemListEnd
+
+    \docSubheading
+      {Hargrove Engineers and Constructors}{Katy, TX}
+      {Controls \& Automations Engineering Intern}{May 2023 -- August 2023}
+      \docItemListStart
+        \docItem{Instantiated existing library modules to complete Westlake's PVC plant Reactor and Train configuration.}
+        \docItem{Performed safety testing on all module and sequence configurations on simulated ABB hardware.}
+        \docItem{Successfully configured Modbus communication between the ABB and HIMA system controllers.}
+        \docItem{Updated structured text configuration to handle cross-controller communications.}
+      \docItemListEnd
+
+      \docSubheading
+        {Harris County}{Houston, TX}
+        {Elections Clerk}{May 2022 \& Dec 2023}
+        \docItemListStart
+          \docItem{Assisted with polling operations, equipment setup and takedown, and ballot transportion.}
+        \docItemListEnd
+  \docSubHeadingListEnd
+
+
+\section{Talks, Panels, \& Presentations}
+  \docSubHeadingListStart
+    \docSubheading
+      {GCASR 2026}{Evanston, IL}
+      {Poster Presenter}{May 11, 2026}
+      \docItemListStart
+        \docItem{Poster: \textit{Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference}.}
+      \docItemListEnd
+
+    \docSubheading
+      {Supercomputing '25}{St. Louis, MO}
+      {Presenter, Demonstrator, and Panelist}{November 16 -- 19, 2025}
+      \begin{small}
+        \begin{itemize}[itemindent=0pt]
+          \item Featured panelist for the XLOOP Workshop expert session on edge-to-HPC loop architectures and computing trends [\href{https://vimeo.com/1139653482?share=copy&fl=sv&fe=ci}{Recording available online}].
+          \item Presented xGFabric and its findings at the Department of Energy's (DOE) booth using a live demo to an audience of DOE staff, SC attendees, and fellow researchers. The demo showcased the full end-to-end pipeline: fetching and parsing data, launching simulations, and rendering results.
+        \end{itemize}
+      \end{small}
+
+    \docSubheading
+      {HPDC 2025}{Notre Dame, IN}
+      {Poster Presenter}{July 21, 2025}
+      \docItemListStart
+        \docItem{Poster: \textit{xGFabric: Coupling Sensor Networks and HPC Facilities with 5G Wireless Networks for Real-Time Digital Agriculture}.}
+      \docItemListEnd
+  \docSubHeadingListEnd
+
+
+\section{Teaching Experience}
+  \docSubHeadingListStart
+    \docSubheading
+      {The University of Notre Dame}{Notre Dame, IN}
+      {Graduate Teaching Assistant}{August 2024 -- May 2025}
+      \begin{small}
+        \begin{itemize}
+          \item CSE 10102; Elements of Computing II (Spring 2025): 37 students; held office hours, graded, assisted with in-class coding.
+          \item CSE 10001; Principles of Computing (Fall 2024): 35 students; proctored exams and graded.
+        \end{itemize}
+      \end{small}
+  \docSubHeadingListEnd
+
+
+\section{Technical Skills}
+  \begin{small}
+    \begin{tabular*}{\textwidth}[t]{l}
+        \hspace*{1em}\textbf{Programming Languages:} Bash, C, CUDA, Java, Python, Rust, SQL \\
+        \hspace*{1em}\textbf{HPC \& Distributed Systems:} HTCondor, Makeflow, MPI, OpenMP, Slurm, Univa Grid Engine (UGE), Work Queue \\
+        \hspace*{1em}\textbf{Technologies:} Docker, Git, Linux/UNIX, Make/CMake, OpenFOAM, ParaView, Spack, Vim \\
+        \hspace*{1em}\textbf{Web Development:} CSS, HTML, JavaScript/NodeJS, Jekyll, React \\
+    \end{tabular*}
+  \end{small}
+
+
+\section{Projects}
+  \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{\href{https://github.com/RHartung-ND/Rust-Compiler}{Bminor Compiler}} | \textit{C, Rust, x86 Assembly} & \textit{Oct 2025 -- Present}\\
+    \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
+      \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
+        \item[--] Ported a multi-stage C compiler to idiomatic Rust, implementing lexing, AST parsing, static type checking, and x86-64 code generation.
+        \item[--] Refactored C's legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
+      \end{itemize}
+    }\vspace{-10pt}\\
+
+    \textbf{\href{https://github.com/RHartung-ND/rhartung-hpds}{High-Performance Distributed Systems (CSE 60772)}} | \textit{C, CUDA, OpenMP, HTCondor} & \textit{Aug 2026 -- Present}\\
+    \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
+      \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
+        \item[--] Wrote CUDA and hybrid CPU+GPU versions of three benchmarks; hybrid versions ran 419$\times$ (heat) and 77$\times$ (wave) faster than serial CPU, and up to 13$\times$ faster than GPU-only.
+        \item[--] Characterized CPU/GPU crossover: kernel launch and transfer overhead let the CPU outperform the GPU on grids below $\sim$128--256 elements.
+        \item[--] Measured compiler auto-vectorization on a 1D heat solver (\texttt{-O3} gave $\sim$7$\times$ over unoptimized code; SIMD ISA flags had negligible effect) and OpenMP N-body scaling across sockets.
+      \end{itemize}
+    }\vspace{-10pt}\\
+
+    \textbf{\href{https://github.com/RHartung-ND/Auto-Scroll-Linux}{Linux Auto-scroller}} | \textit{Rust} & \textit{Jun 2025 -- Present}\\
+    \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
+      \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
+        \item[--] Engineered a low-level system utility bringing native middle-click auto-scrolling to Linux.
+        \item[--] Interfaced with system input APIs to calculate cursor displacement and dynamically modulate scroll speed.
+      \end{itemize}
+    }\vspace{-10pt}\\
+  \end{tabular*}
+
+
+\section{Leadership \& Service}
+  \begin{small}
+    \begin{tabularx}{\textwidth}{@{} X r @{}}
+      \textbf{Order of Christian Initiation of Adults (OCIA)}, Sponsor & September 2026 -- Present \\
+      \textbf{CCL Web \& Communications:} Writing blog posts, publishing lab announcements, and maintaining the Cooperative Computing Lab's website. & May 2026 -- Present \\
+      \textbf{Fischer Graduate Residence Mass}, Lector & August 2025 -- May 2026 \\
+      \textbf{Society of Catholic Scientists}, Member & August 2025 -- Present \\
+      \textbf{Science Policy Initiative at Notre Dame}, Member & August 2025 -- Present \\
+      \textbf{Catholic Graduate Community}, Member & April 2025 -- Present \\
+      \textbf{Technology and Catholicism Club}, Member & February 2025 -- Present \\
+      \textbf{Notre Dame Rock Climbing Club}, Member & August 2024 -- Present \\
+      \textbf{Notre Dame Texas Club}, Member & August 2024 -- Present \\
+      \textbf{Science Olympiad}, Competitor, Mentor, President, Event Supervisor, and Lab Coordinator & August 2011 -- Present \\
+    \end{tabularx}
+  \end{small}
+
+
+\end{document}

@@ -1,0 +1,15 @@
+---
+layout: archive
+title: "Resume"
+permalink: /background/resume
+author_profile: true
+---
+
+{% include base_path %}
+
+{% include post_pagination.html %}
+
+{% capture resume_content %}{% include_relative resume.md %}{% endcapture %}
+{{ resume_content | markdownify }}
+
+{% include post_pagination.html %}

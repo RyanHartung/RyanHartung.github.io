@@ -1,0 +1,8 @@
+- id: cv
+  title: Curriculum Vitae
+  blurb: My full academic record, including publications, talks, teaching, and service.
+  download_name: Ryan_Hartung_CV
+- id: resume
+  title: Resume
+  blurb: A concise two page summary of my experience and skills.
+  download_name: Ryan_Hartung_Resume

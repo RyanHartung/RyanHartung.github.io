@@ -132,22 +132,22 @@
   }
 </style>
 
-<nav class="post-nav" id="folder-pagination" aria-label="Post navigation" hidden>
-  <a id="prev-btn" class="post-nav__item post-nav__item--prev is-disabled" aria-disabled="true">
+<nav class="post-nav" aria-label="Post navigation" hidden>
+  <a class="post-nav__item post-nav__item--prev is-disabled" aria-disabled="true">
     <span class="post-nav__label">
       <span class="post-nav__arrow" aria-hidden="true">&larr;</span>
       {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}
     </span>
     <span class="post-nav__title"></span>
   </a>
-  <a id="up-btn" href="#" class="post-nav__item post-nav__item--up">
+  <a href="#" class="post-nav__item post-nav__item--up">
     <span class="post-nav__label">
       <span class="post-nav__arrow" aria-hidden="true">&uarr;</span>
       Back to
     </span>
     <span class="post-nav__title"></span>
   </a>
-  <a id="next-btn" class="post-nav__item post-nav__item--next is-disabled" aria-disabled="true">
+  <a class="post-nav__item post-nav__item--next is-disabled" aria-disabled="true">
     <span class="post-nav__label">
       {{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}
       <span class="post-nav__arrow" aria-hidden="true">&rarr;</span>
@@ -159,11 +159,17 @@
 {% raw %}
 <script>
   document.addEventListener("DOMContentLoaded", async function () {
-    const currentPath = decodeURIComponent(window.location.pathname);
+    const navs = [...document.querySelectorAll('.post-nav:not([data-pagination-ready])')];
+    if (!navs.length) return;
+    navs.forEach(nav => nav.dataset.paginationReady = 'true');
+
+    const normalizePath = (path) => decodeURIComponent(path).replace(/\/+$/, '') || '/';
+    const currentPath = normalizePath(window.location.pathname);
 
     const pathSegments = currentPath.split('/').filter(Boolean);
     if (pathSegments.length < 2) return;
-    const parentFolderUrl = '/' + pathSegments.slice(0, -1).join('/') + '/';
+    const parentPath = '/' + pathSegments.slice(0, -1).join('/');
+    const parentFolderUrl = parentPath + '/';
     const parentName = pathSegments[pathSegments.length - 2].replace(/[-_]+/g, ' ');
 
     try {
@@ -171,25 +177,23 @@
       if (!res.ok) return;
       const htmlText = await res.text();
 
-      const upBtn = document.getElementById('up-btn');
-      upBtn.href = parentFolderUrl;
-      upBtn.querySelector('.post-nav__title').textContent = parentName;
-      document.getElementById('folder-pagination').hidden = false;
-
       const doc = new DOMParser().parseFromString(htmlText, 'text/html');
 
       const pages = new Map();
       doc.querySelectorAll('a').forEach(a => {
         const href = a.getAttribute('href');
-        if (!href || !href.startsWith(parentFolderUrl) || href === parentFolderUrl) return;
-        const text = a.textContent.trim();
-        if (!pages.has(href) || (!pages.get(href) && text)) pages.set(href, text);
+        if (!href) return;
+        const url = new URL(href, window.location.origin);
+        const pagePath = normalizePath(url.pathname);
+        if (url.origin !== window.location.origin || !pagePath.startsWith(parentPath + '/')) return;
+        const text = a.dataset.paginationTitle || a.textContent.trim();
+        if (!pages.has(pagePath) || a.dataset.paginationTitle || (!pages.get(pagePath) && text)) {
+          pages.set(pagePath, text);
+        }
       });
 
       const uniquePages = [...pages.keys()];
-      const currentIndex = uniquePages.findIndex(
-        url => currentPath.endsWith(url) || url.endsWith(currentPath)
-      );
+      const currentIndex = uniquePages.indexOf(currentPath);
       if (currentIndex === -1) return;
 
       const enable = (el, url) => {
@@ -200,8 +204,14 @@
         el.querySelector('.post-nav__title').textContent = pages.get(url) || '';
       };
 
-      enable(document.getElementById('prev-btn'), uniquePages[currentIndex - 1]);
-      enable(document.getElementById('next-btn'), uniquePages[currentIndex + 1]);
+      navs.forEach(nav => {
+        const upBtn = nav.querySelector('.post-nav__item--up');
+        upBtn.href = parentFolderUrl;
+        upBtn.querySelector('.post-nav__title').textContent = parentName;
+        enable(nav.querySelector('.post-nav__item--prev'), uniquePages[currentIndex - 1]);
+        enable(nav.querySelector('.post-nav__item--next'), uniquePages[currentIndex + 1]);
+        nav.hidden = false;
+      });
     } catch (err) {
       console.error("Pagination navigation error:", err);
     }

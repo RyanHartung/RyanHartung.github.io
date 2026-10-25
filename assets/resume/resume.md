@@ -57,7 +57,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Undergraduate Research Assistant** — Jun 2022 – Dec 2023
 
-- Engineered an open-source Python tool analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.
+- Engineered an [open-source Python tool](https://github.com/BrownDwarf/contracosta) analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.
 
 - Evaluated star-spot contrast ratios using observational data from NASA Kepler and TESS missions to establish baseline metrics for exoplanet detection.
 
@@ -93,19 +93,19 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 ## Projects
 
-**[Bminor Compiler](https://github.com/RHartung-ND/Rust-Compiler)** \| *C, Rust, x86 Assembly* — *Oct 2025 – Present*
-
-- Ported a multi-stage C compiler to idiomatic Rust, implementing lexing, AST parsing, static type checking, and x86-64 code generation.
-
-- Refactored C’s legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
-
-**[High-Performance Distributed Systems (CSE 60772)](https://github.com/RHartung-ND/rhartung-hpds)** \| *C, CUDA, OpenMP, HTCondor* — *Aug 2026 – Present*
+**[High-Performance Distributed Systems](https://github.com/RHartung-ND/rhartung-hpds)** \| *C, CUDA, OpenMP, HTCondor* — *Aug 2026 – Present*
 
 - Wrote CUDA and hybrid CPU+GPU versions of three benchmarks; hybrid versions ran 419× (heat) and 77× (wave) faster than serial CPU, and up to 13× faster than GPU-only.
 
 - Characterized CPU/GPU crossover: kernel launch and transfer overhead let the CPU outperform the GPU on grids below ~128–256 elements.
 
 - Measured compiler auto-vectorization on a 1D heat solver (`-O3` gave ~7× over unoptimized code; SIMD ISA flags had negligible effect) and OpenMP N-body scaling across sockets.
+
+**[Bminor Compiler](https://github.com/RHartung-ND/Rust-Compiler)** \| *C, Rust, x86 Assembly* — *Oct 2025 – Present*
+
+- Ported a multi-stage C compiler to idiomatic Rust, implementing lexing, AST parsing, static type checking, and x86-64 code generation.
+
+- Refactored C’s legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
 
 **[Linux Auto-scroller](https://github.com/RHartung-ND/Auto-Scroll-Linux)** \| *Rust* — *Jun 2025 – Present*
 

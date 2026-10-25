@@ -136,7 +136,7 @@ anchorcolor = linkblue]{hyperref}
       {The University of Texas at Austin}{Austin, TX}
       {Undergraduate Research Assistant}{Jun 2022 -- Dec 2023}
       \docItemListStart
-        \docItem{Engineered an open-source Python tool analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.}
+        \docItem{Engineered an \href{https://github.com/BrownDwarf/contracosta}{open-source Python tool} analyzing star-spot patterns across 6,000+ star systems with optimized array processing algorithms.}
         \docItem{Evaluated star-spot contrast ratios using observational data from NASA Kepler and TESS missions to establish baseline metrics for exoplanet detection.}
         \docItem{Integrated parallel processing with \texttt{concurrent.futures} to optimize data throughput and execution runtime.}
       \docItemListEnd
@@ -180,20 +180,20 @@ anchorcolor = linkblue]{hyperref}
 
 \section{Projects}
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{\href{https://github.com/RHartung-ND/Rust-Compiler}{Bminor Compiler}} | \textit{C, Rust, x86 Assembly} & \textit{Oct 2025 -- Present}\\
-    \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
-      \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
-        \item[--] Ported a multi-stage C compiler to idiomatic Rust, implementing lexing, AST parsing, static type checking, and x86-64 code generation.
-        \item[--] Refactored C's legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
-      \end{itemize}
-    }\vspace{-10pt}\\
-
-    \textbf{\href{https://github.com/RHartung-ND/rhartung-hpds}{High-Performance Distributed Systems (CSE 60772)}} | \textit{C, CUDA, OpenMP, HTCondor} & \textit{Aug 2026 -- Present}\\
+    \textbf{\href{https://github.com/RHartung-ND/rhartung-hpds}{High-Performance Distributed Systems}} | \textit{C, CUDA, OpenMP, HTCondor} & \textit{Aug 2026 -- Present}\\
     \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
       \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
         \item[--] Wrote CUDA and hybrid CPU+GPU versions of three benchmarks; hybrid versions ran 419$\times$ (heat) and 77$\times$ (wave) faster than serial CPU, and up to 13$\times$ faster than GPU-only.
         \item[--] Characterized CPU/GPU crossover: kernel launch and transfer overhead let the CPU outperform the GPU on grids below $\sim$128--256 elements.
         \item[--] Measured compiler auto-vectorization on a 1D heat solver (\texttt{-O3} gave $\sim$7$\times$ over unoptimized code; SIMD ISA flags had negligible effect) and OpenMP N-body scaling across sockets.
+      \end{itemize}
+    }\vspace{-10pt}\\
+
+    \textbf{\href{https://github.com/RHartung-ND/Rust-Compiler}{Bminor Compiler}} | \textit{C, Rust, x86 Assembly} & \textit{Oct 2025 -- Present}\\
+    \multicolumn{2}{@{}p{\textwidth}@{}}{\vspace{-8pt}
+      \begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=2em]
+        \item[--] Ported a multi-stage C compiler to idiomatic Rust, implementing lexing, AST parsing, static type checking, and x86-64 code generation.
+        \item[--] Refactored C's legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
       \end{itemize}
     }\vspace{-10pt}\\
 

@@ -73,9 +73,11 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Web Development:** CSS, HTML, JavaScript/NodeJS, Jekyll, React
 
+**Languages:** English (native), Spanish (intermediate; stronger reading)
+
 ## Publications
 
-- **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Asynchronous Scientific Workflows for Simulation-Driven Inference Across the Edge–HPC Computing Continuum.” *Future Generation Computer Systems* (Elsevier), special issue, 2026. (Under review).
+- **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Asynchronous Scientific Workflows for Simulation-Driven Inference Across the Edge–HPC Computing Continuum.” *Future Generation Computer Systems* (Elsevier), special issue. (Under review).
 
 - **2026** — Liubov Kurafeeva, Benjamin Carter, **Ryan Hartung**, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.” In *Proceedings of IEEE Smart Connected Systems and Emerging Technologies Conference (IEEE SCSETech)*, 2026 (To appear).
 
@@ -109,18 +111,24 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 - Refactored C’s legacy pointer-heavy data structures into memory-safe pattern matching and algebraic types.
 
-**[Linux Auto-scroller](https://github.com/RHartung-ND/Auto-Scroll-Linux)** \| *Rust* — *Jun 2025 – Present*
-
-- Engineered a low-level system utility bringing native middle-click auto-scrolling to Linux.
-
-- Interfaced with system input APIs to calculate cursor displacement and dynamically modulate scroll speed.
-
 ## Leadership & Service
+
+**Order of Christian Initiation of Adults (OCIA):** Sponsor — Sep 2026 – Present
 
 **CCL Web & Communications:** Writing blog posts, publishing lab announcements, and maintaining the Cooperative Computing Lab’s website. — May 2026 – Present
 
 **Graduate Teaching Assistant:** Held office hours, proctored, and graded for *Elements of Computing II* (37 students) and *Principles of Computing* (35 students). — Fall 2024 – Spring 2025
 
-**Civic Service**: Elections Clerk for Harris County assisting with polling operations, equipment setup and takedown, and ballot transport. — May 2022 & Dec 2023
+**Civic Service:** Elections Clerk for Harris County assisting with polling operations, equipment setup and takedown, and ballot transport. — May 2022 & Dec 2023
 
-**Science Olympiad**: Competitor, Mentor, President, Event Supervisor, and Lab Coordinator — Aug 2011 – Present
+## Memberships, Clubs, & Interests
+
+**Society of Catholic Scientists**, Member — Aug 2025 – Present
+
+**Association for Computing Machinery (ACM)**, Student Member — May 2025 – Present
+
+**Notre Dame Rock Climbing Club**, Member — Aug 2024 – Present
+
+**Science Olympiad**: Competitor, Mentor, President, Event Supervisor (volunteer), and Lab Coordinator — Aug 2011 – Present
+
+**Interests:** Language learning/linguistics, volleyball, intramural soccer, road trips, anime/manga

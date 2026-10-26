@@ -25,7 +25,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 ## Publications
 
-- **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Asynchronous Scientific Workflows for Simulation-Driven Inference Across the Edge–HPC Computing Continuum.” *Future Generation Computer Systems* (Elsevier), special issue, 2026. (Under review).
+- **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Asynchronous Scientific Workflows for Simulation-Driven Inference Across the Edge–HPC Computing Continuum.” *Future Generation Computer Systems* (Elsevier), special issue. (Under review).
 
 - **2026** — Liubov Kurafeeva, Benjamin Carter, **Ryan Hartung**, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.” In *Proceedings of IEEE Smart Connected Systems and Emerging Technologies Conference (IEEE SCSETech)*, 2026 (To appear).
 
@@ -135,6 +135,8 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Web Development:** CSS, HTML, JavaScript/NodeJS, Jekyll, React
 
+**Languages:** English (native), Spanish (intermediate; stronger reading)
+
 ## Projects
 
 **[High-Performance Distributed Systems](https://github.com/RHartung-ND/rhartung-hpds)** \| *C, CUDA, OpenMP, HTCondor* — *Aug 2026 – Present*
@@ -163,11 +165,15 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **CCL Web & Communications:** Writing blog posts, publishing lab announcements, and maintaining the Cooperative Computing Lab’s website. — May 2026 – Present
 
+## Memberships, Clubs, & Interests
+
 **Fischer Graduate Residence Mass**, Lector — August 2025 – May 2026
 
 **Society of Catholic Scientists**, Member — August 2025 – Present
 
 **Science Policy Initiative at Notre Dame**, Member — August 2025 – Present
+
+**Association for Computing Machinery (ACM)**, Student Member — May 2025 – Present
 
 **Catholic Graduate Community**, Member — April 2025 – Present
 
@@ -178,3 +184,5 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 **Notre Dame Texas Club**, Member — August 2024 – Present
 
 **Science Olympiad**, Competitor, Mentor, President, Event Supervisor, and Lab Coordinator — August 2011 – Present
+
+**Interests:** Language learning/linguistics, volleyball, intramural soccer, road trips, anime/manga

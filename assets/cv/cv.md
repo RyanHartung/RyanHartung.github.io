@@ -25,7 +25,9 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 ## Publications
 
-- **2026** — Liubov Kurafeeva, Benjamin Carter, **Ryan Hartung**, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.” In *Proceedings of IEEE SCTech 2026* (To appear).
+- **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Asynchronous Scientific Workflows for Simulation-Driven Inference Across the Edge–HPC Computing Continuum.” *Future Generation Computer Systems* (Elsevier), special issue, 2026. (Under review).
+
+- **2026** — Liubov Kurafeeva, Benjamin Carter, **Ryan Hartung**, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “GROWFLOW: Low-latency Computational Fluid Dynamics at the Edge for Real-time Agricultural Decision Support.” In *Proceedings of IEEE Smart Connected Systems and Emerging Technologies Conference (IEEE SCSETech)*, 2026 (To appear).
 
 - **2026** — Liubov Kurafeeva, **Ryan Hartung**, Benjamin Carter, Alan Subedi, Avhishek Biswas, Michael Fay, Shantenu Jha, Chandra Krintz, Andre Merzky, Douglas Thain, Mehmet Vuran, and Rich Wolski. “Hybrid Edge-HPC Systems for Low-Latency Data-Driven Inference.” *arXiv preprint arXiv:2605.20532*. <https://arxiv.org/abs/2605.20532>
 

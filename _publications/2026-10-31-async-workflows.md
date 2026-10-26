@@ -30,8 +30,8 @@ Scientific workflow architecture, Hybrid physics–data modeling, Edge–HPC com
 - **Submitted to:** Future Generation Computer Systems, special issue
 <!-- - **Published in:** *Proceedings of the SC '25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis*, pp. 2317–2327 (2025) -->
 - **Publisher:** Elsevier
-<!-- - **DOI:** [10.1145/3731599.3767589](https://doi.org/10.1145/3731599.3767589)
-- **Preprint:** [Read on arXiv](https://arxiv.org/abs/2509.20340) -->
+<!-- - **DOI:** [10.1145/3731599.3767589](https://doi.org/10.1145/3731599.3767589) -->
+<!-- - **Preprint:** [Read on arXiv](https://arxiv.org/abs/2509.20340) -->
 
 ## Citation
 

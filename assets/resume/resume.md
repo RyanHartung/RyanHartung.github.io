@@ -73,7 +73,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Web Development:** CSS, HTML, JavaScript/NodeJS, Jekyll, React
 
-**Languages:** English (native), Spanish (intermediate; stronger reading)
+**Languages:** English (native), Spanish (intermediate), Japanese (beginner)
 
 ## Publications
 
@@ -131,4 +131,4 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Science Olympiad**: Competitor, Mentor, President, Event Supervisor (volunteer), and Lab Coordinator — Aug 2011 – Present
 
-**Interests:** Language learning/linguistics, volleyball, intramural soccer, road trips, anime/manga
+**Interests:** Aviation, languages/linguistics, volleyball, intramural soccer, road trips, anime/manga

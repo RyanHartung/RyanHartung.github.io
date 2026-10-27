@@ -135,7 +135,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Web Development:** CSS, HTML, JavaScript/NodeJS, Jekyll, React
 
-**Languages:** English (native), Spanish (intermediate; stronger reading)
+**Languages:** English (native), Spanish (intermediate), Japanese (beginner)
 
 ## Projects
 
@@ -165,7 +165,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **CCL Web & Communications:** Writing blog posts, publishing lab announcements, and maintaining the Cooperative Computing Lab’s website. — May 2026 – Present
 
-## Memberships, Clubs, & Interests
+## Memberships & Clubs
 
 **Fischer Graduate Residence Mass**, Lector — August 2025 – May 2026
 
@@ -185,4 +185,14 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Science Olympiad**, Competitor, Mentor, President, Event Supervisor, and Lab Coordinator — August 2011 – Present
 
-**Interests:** Language learning/linguistics, volleyball, intramural soccer, road trips, anime/manga
+## Interests
+
+- Aviation
+
+- Learning languages/linguistics (Arabic, Russian, Latin, Portuguese, Spanish, Japanese, Korean)
+
+- Playing sports (volleyball, intramural soccer, swimming, pickleball, tennis, cycling)
+
+- Going on road trips
+
+- Anime/manga

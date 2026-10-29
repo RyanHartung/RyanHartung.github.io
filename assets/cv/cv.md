@@ -67,7 +67,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 ### Hargrove Engineers and Constructors — Katy, TX
 
-**Controls & Automations Engineering Intern** — May 2024 – August 2024
+**Controls & Automation Engineering Intern** — May 2024 – August 2024
 
 - Automated the migration of 200,000+ lines of Dow MOD5 code into Honeywell Experion with no loss of functionality.
 
@@ -77,7 +77,7 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 ### Hargrove Engineers and Constructors — Katy, TX
 
-**Controls & Automations Engineering Intern** — May 2023 – August 2023
+**Controls & Automation Engineering Intern** — May 2023 – August 2023
 
 - Instantiated existing library modules to complete Westlake’s PVC plant Reactor and Train configuration.
 

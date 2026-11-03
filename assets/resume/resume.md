@@ -9,6 +9,8 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 **Ph.D. in Computer Science & Engineering** — Expected May 2029
 
+- Advisor: Dr. Douglas Thain
+
 - Research Focus: Portability, Reliability, and Scalability of Distributed and High-Performance Systems
 
 *M.S. in Computer Science & Engineering* — *Aug 2024 – Aug 2025*

@@ -41,6 +41,8 @@ U.S. Citizen · South Bend, IN · (713) 449-9492 · <rhartung@nd.edu>\
 
 - Identified OpenFOAM simulation as the pipeline’s latency bottleneck; profiled scaling from 1–64 cores across 1–4 nodes and found single-node 32–64 core runs minimized turnaround, outperforming multi-node runs.
 
+- xGFabric work supported by DOE Office of Science grant DE-SC0025541.
+
 ### Hargrove Engineers and Constructors — Katy, TX
 
 **Controls & Automation Engineering Intern** — Summer 2023 & 2024
